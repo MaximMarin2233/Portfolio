@@ -1,27 +1,36 @@
 <header class="header">
   <div class="container header__content">
     <a class="header__main" href="/">Главная</a>
-    <nav class="nav">
-      <ul class="list-reset nav__list" title="Главная навигация сайта">
-        <li class="nav__item">
-          <a class="nav__link" href="#" target="_blank" aria-label="Мой аккаунт в Телеграме">
-            <svg class="nav__icon">
+
+    <div class="header__icons">
+      <ul class="list-reset social" title="Связаться со мной">
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank" aria-label="Мой аккаунт в Телеграме">
+            <svg class="social__icon">
               <use xlink:href="img/sprite.svg#telegram"></use>
             </svg>
           </a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#" target="_blank" aria-label="Мой аккаунт в ВКонтакте">
-            <svg class="nav__icon">
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank" aria-label="Мой аккаунт в ВКонтакте">
+            <svg class="social__icon">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
-        <li class="nav__item">
-          <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-            <span class="burger__line"></span>
-          </button>
-        </li>
+      </ul>
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </div>
+  <div class="burger-menu" data-menu>
+    <nav class="nav" title="Главная навигация сайта">
+      <ul class="list-reset nav__list nav__list--column">
+        <li class="nav__item burger-menu__item"><a class="nav__link burger-menu__link" href="#" data-menu-item>Главная</a></li>
+        <li class="nav__item burger-menu__item"><a class="nav__link burger-menu__link" href="#" data-menu-item>Мои работы</a></li>
+        <li class="nav__item burger-menu__item"><a class="nav__link burger-menu__link" href="#" data-menu-item>Про меня</a></li>
+        <li class="nav__item burger-menu__item"><a class="nav__link burger-menu__link" href="#" data-menu-item>Контакты</a></li>
       </ul>
     </nav>
   </div>

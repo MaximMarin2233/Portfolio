@@ -8,11 +8,19 @@
 
   &__content {
     @include flex-all-sb;
+
+    position: relative;
+    z-index: 99;
   }
 
   &__main {
     font-weight: 500;
     font-size: 30px;
+    letter-spacing: 0.1em;
     color: var(--light-color);
+  }
+
+  &__icons {
+    @include flex-v-center;
   }
 }
