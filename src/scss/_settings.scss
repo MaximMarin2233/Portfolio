@@ -16,9 +16,10 @@ html {
 
 .page__body {
   margin: 0;
-  height: 100%;
   min-width: 320px;
+  min-height: 100%;
   font-size: 16px;
+  color: var(--light-color);
   background-image: linear-gradient(257.37deg, #173173 0%, rgb(23 49 115 / 1.56%) 99.99%, rgb(37 70 185 / 0%) 100%);
   background-color: #000;
 }
@@ -81,9 +82,14 @@ a {
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  &--full-height {
+    height: 100vh;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -106,4 +112,31 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.stars {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  z-index: -1;
+  width: 1300px;
+  transform: translateY(-50%);
+}
+
+.moon-bg {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 100%;
+  width: 600px;
+  height: 600px;
+  box-shadow:
+    0 0 0 400px rgb(237 244 250 / 5%),
+    0 0 0 320px rgb(237 244 250 / 5%),
+    0 0 0 240px rgb(237 244 250 / 5%),
+    0 0 0 160px rgb(237 244 250 / 5%),
+    0 0 0 80px rgb(237 244 250 / 5%);
+  background-color: rgb(237 244 250 / 29%);
+  transform: translateY(-50%);
 }

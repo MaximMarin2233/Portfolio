@@ -5,4 +5,14 @@
 @import "settings";
 
 // подключения компонентов страницы
+
+// малые компоненты
+@import "./components/animations";
+@import "./components/burger";
+@import "./components/nav";
+
+// большие компоненты
 @import "./components/header";
+
+// media queries
+@import "./media";

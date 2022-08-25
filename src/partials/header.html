@@ -1,3 +1,28 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__content">
+    <a class="header__main" href="/">Главная</a>
+    <nav class="nav">
+      <ul class="list-reset nav__list" title="Главная навигация сайта">
+        <li class="nav__item">
+          <a class="nav__link" href="#" target="_blank" aria-label="Мой аккаунт в Телеграме">
+            <svg class="nav__icon">
+              <use xlink:href="img/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#" target="_blank" aria-label="Мой аккаунт в ВКонтакте">
+            <svg class="nav__icon">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav__item">
+          <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <span class="burger__line"></span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>

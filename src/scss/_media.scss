@@ -1,0 +1,19 @@
+@media (hover: hover) and (pointer: fine) {
+  .nav {
+    &__link {
+      &:hover {
+        color: rgb(255 255 255 / 50%);
+        transition-delay: 1000ms;
+        animation: tada 1000ms;
+      }
+    }
+  }
+
+  .burger {
+    &:hover {
+      color: rgb(255 255 255 / 50%);
+      transition-delay: 1000ms;
+      animation: rubberBand 1000ms;
+    }
+  }
+}
