@@ -10,6 +10,21 @@
   }
 
   .burger {
+    &-menu__link {
+      &:hover {
+        &::before,
+        &::after {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &-menu__link-content {
+      &:hover {
+        transform: scaleY(1.2);
+      }
+    }
+
     &:hover {
       color: rgb(255 255 255 / 50%);
       transition-delay: 1000ms;

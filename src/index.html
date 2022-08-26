@@ -4,18 +4,18 @@
 @include('partials/head.html')
 
 <body class="page__body">
-  <div class="site-container">
-    @include('partials/header.html')
-    <main class="main">
-      <div class="container container--full-height">
-
-        @include('partials/bg-elements.html')
+  @include('partials/header.html')
+  <main class="main">
+    <div class="container container--full-height">
+      <div class="full-page">
+        @include('partials/home.html')
       </div>
-    </main>
+      @include('partials/bg-elements.html')
+    </div>
+  </main>
 
-    @include('partials/footer.html')
-    <!-- @include('html/h1.html') пример include -->
-  </div>
+  @include('partials/footer.html')
+  <!-- @include('html/h1.html') пример include -->
 </body>
 
 </html>
