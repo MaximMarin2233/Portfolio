@@ -62,3 +62,35 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes aboutIllistration {
+  from {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(-5%);
+  }
+
+  70% {
+    transform: translateY(-40%);
+  }
+
+  to {
+    transform: translateY(-29%);
+  }
+}
+
+@keyframes eye {
+  from {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(0.7);
+  }
+
+  from {
+    transform: scaleY(1);
+  }
+}

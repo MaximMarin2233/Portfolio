@@ -1,0 +1,55 @@
+.about {
+  &__text {
+    max-width: 605px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+  }
+
+  &__illistration {
+    position: absolute;
+    right: 20%;
+    top: 0;
+    width: 182px;
+    height: 816px;
+    transform: translateY(-100%);
+    animation: aboutIllistration 2s ease forwards;
+  }
+
+  &__img {
+    position: absolute;
+
+    &--spiderman-body {
+      right: 50%;
+      top: 0;
+      transform: translateX(50%);
+    }
+
+    &--spiderman-head {
+      right: 50%;
+      bottom: 8px;
+      transform: translateX(50%);
+    }
+
+    &--eye-1 {
+      left: 11px;
+      bottom: 67px;
+      animation: eye 1s ease 1s;
+    }
+
+    &--eye-2 {
+      right: 11px;
+      bottom: 67px;
+      animation: eye 1s ease 1s;
+    }
+
+    &--emotion {
+
+    }
+  }
+}

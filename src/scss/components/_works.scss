@@ -1,0 +1,21 @@
+.works {
+  &__text {
+    max-width: 720px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+}

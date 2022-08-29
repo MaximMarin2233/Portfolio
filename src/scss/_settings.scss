@@ -15,6 +15,7 @@ html {
 }
 
 .page__body {
+  counter-reset: pagination;
   overflow: hidden;
   margin: 0;
   height: 100%;
@@ -120,6 +121,10 @@ svg {
   position: relative;
 }
 
+.full-page {
+  transform: translateY(-200vh);
+}
+
 .title {
   position: relative;
   margin: 0;
@@ -127,7 +132,6 @@ svg {
   font-size: 100px;
   line-height: 120px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
 
   &::after {
     content: "";
@@ -138,6 +142,40 @@ svg {
     width: 50%;
     height: 4px;
     background-color: var(--main-color);
+  }
+}
+
+.title-absolute {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  z-index: -1;
+  margin: 0;
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--main-color);
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  &--number {
+    font-size: 100px;
+    color: var(--light-color);
+
+    &:nth-child(-n + 9) {
+      &::before {
+        counter-increment: pagination;
+        content: "0" counter(pagination);
+      }
+    }
+
+    &:nth-child(n + 10) {
+      &::before {
+        counter-increment: pagination;
+        content: counter(pagination);
+      }
+    }
   }
 }
 
@@ -174,4 +212,13 @@ svg {
     0 0 0 80px rgb(237 244 250 / 5%);
   background-color: rgb(237 244 250 / 29%);
   transform: translateY(-50%);
+}
+
+.section-default {
+  @include flex;
+
+  position: relative;
+  align-items: center;
+  padding-left: 170px;
+  height: 100vh;
 }
