@@ -10,6 +10,7 @@
   height: var(--burger-height);
   color: var(--light-color);
   background-color: transparent;
+  filter: drop-shadow(3px 3px 10px var(--dark-color));
   transition: color 500ms ease-in-out;
   cursor: pointer;
 
@@ -49,23 +50,22 @@
     width: 100%;
     height: 100%;
     background-image: linear-gradient(257.37deg, #ff4d5a 0%, rgb(23 49 115 / 80%) 99.99%, rgb(37 70 185 / 50%) 100%);
+    visibility: hidden;
     transform: translateY(-100%);
-    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, visibility 500ms ease-in-out;
 
     &__item {
       @include mb(50px);
 
-      overflow: hidden;
       text-align: center;
     }
 
     &__link {
-      display: flex;
-      justify-content: center;
+      position: relative;
+      display: block;
+      overflow: hidden;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      transform: translateY(100%);
-      transition: transform 500ms ease-in-out 500ms;
 
       &::before,
       &::after {
@@ -87,9 +87,17 @@
         right: 0;
         transform: translateX(100%);
       }
+    }
+
+    &__link-inside {
+      display: flex;
+      justify-content: center;
+      transform: translateY(100%);
+      transition: transform 500ms ease-in-out;
 
       &--active {
         transform: translateY(0);
+        transition-delay: 500ms;
       }
     }
 
@@ -103,6 +111,7 @@
     }
 
     &--active {
+      visibility: visible;
       transform: translateY(0);
     }
   }

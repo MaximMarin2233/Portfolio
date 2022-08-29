@@ -14,10 +14,12 @@
   }
 
   &__main {
+    font-family: "MontserratAlternates", sans-serif;
     font-weight: 500;
     font-size: 30px;
     letter-spacing: 0.1em;
     color: var(--light-color);
+    transition: color 500ms ease-in-out;
   }
 
   &__icons {

@@ -12,6 +12,7 @@
     width: 40px;
     height: 40px;
     color: var(--light-color);
+    filter: drop-shadow(3px 3px 10px var(--dark-color));
     transition: color 500ms ease-in-out;
   }
 }

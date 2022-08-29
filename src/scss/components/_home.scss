@@ -16,21 +16,21 @@
   &__illustration {
     position: absolute;
     right: 8%;
-    top: 0;
+    top: 50%;
     z-index: -1;
     width: 650px;
-    height: 100%;
+    height: 650px;
+    transform: translateY(-50%);
   }
 
   &__moon {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 0;
     border-radius: 100%;
-    width: 650px;
-    height: 650px;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(180deg, #fff 0%, #81b3dd 100%);
-    transform: translateY(-50%);
   }
 
   &__moon-content {
@@ -45,25 +45,25 @@
   &__cloud {
     position: absolute;
     width: 440px;
-    height: 410px;
+    height: 267px;
 
     &--1 {
-      left: 41px;
-      top: 23px;
+      left: 42px;
+      top: -25px;
       z-index: -1;
       transform: translateX(-50%);
     }
 
     &--2 {
-      right: 60px;
-      top: -22px;
+      right: 79px;
+      top: -79px;
       z-index: -1;
       transform: translateX(50%);
     }
 
     &--3 {
-      right: 97px;
-      bottom: 29px;
+      right: 109px;
+      bottom: -40px;
       transform: translateX(50%);
     }
   }
