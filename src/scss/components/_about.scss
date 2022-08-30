@@ -18,7 +18,8 @@
     width: 182px;
     height: 816px;
     transform: translateY(-100%);
-    animation: aboutIllistration 2s ease forwards;
+    animation: aboutIllistration 2s ease forwards, aboutIllistrationDown 1s ease 3s forwards;
+    pointer-events: none;
   }
 
   &__img {
@@ -28,28 +29,124 @@
       right: 50%;
       top: 0;
       transform: translateX(50%);
+      animation: bodyMove 1s ease 2s;
     }
 
     &--spiderman-head {
       right: 50%;
-      bottom: 8px;
+      bottom: 10px;
       transform: translateX(50%);
+      animation: bodyMove 1s ease 2.1s;
+    }
+
+    &--eye-1,
+    &--eye-2 {
+      animation: eyeScale 1s 1s, eyeScale 1s 3s, hidden 1s steps(1) 2s;
     }
 
     &--eye-1 {
       left: 11px;
       bottom: 67px;
-      animation: eye 1s ease 1s;
     }
 
     &--eye-2 {
       right: 11px;
       bottom: 67px;
-      animation: eye 1s ease 1s;
+    }
+
+    &--eye-closed-1,
+    &--eye-closed-2 {
+      animation: visible 1s steps(1) 2s;
+    }
+
+    &--eye-closed-1 {
+      left: 9px;
+      bottom: 90px;
+      opacity: 0;
+    }
+
+    &--eye-closed-2 {
+      right: 9px;
+      bottom: 90px;
+      opacity: 0;
     }
 
     &--emotion {
+      @include flex;
 
+      left: 50%;
+      bottom: -40px;
+      opacity: 0;
+      transform: translateX(-50%);
+      animation: emotion 1s steps(1) 2s;
+
+      &::before,
+      &::after {
+        content: "";
+      }
+
+      &::before,
+      span,
+      &::after {
+        border-style: solid;
+        border-width: 0 10px 40px;
+        border-color: transparent transparent var(--light-color);
+        width: 0;
+        height: 0;
+      }
+
+      &::before {
+        transform: translateX(-15px) rotate(22.5deg);
+      }
+
+      &::after {
+        transform: translateX(15px) rotate(-22.5deg);
+      }
+
+      span {
+        transform: translateY(15px);
+      }
+    }
+
+    &--mouth {
+      left: 50%;
+      bottom: 137px;
+      transform: translateX(-50%) scale(0);
+      transform-origin: top;
+      animation: mouth 0.5s ease 3s forwards, mouth 0.5s ease reverse 5.5s forwards;
+    }
+
+    &--mouth-content {
+      left: 50%;
+      bottom: 168px;
+      opacity: 0;
+      transform: translateX(-50%);
+      animation: visible 0.4s steps(1) 4s, visible 0.4s steps(1) 4.8s;
+    }
+
+    &--mouth-hi {
+      left: 50%;
+      bottom: 163px;
+      opacity: 0;
+      transform: translateX(-50%);
+      animation: visible 0.4s steps(1) 4.4s, visible 0.4s steps(1) 5.2s;
+    }
+
+    &--message {
+      left: -66px;
+      bottom: 138px;
+      transform: translateX(80px) scale(0);
+      animation: message 1s ease 4s forwards, message 0.5s ease reverse 6s forwards;
+
+      span {
+        display: block;
+        border-radius: 100%;
+        padding: 20px;
+        font-weight: 700;
+        font-size: 30px;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+      }
     }
   }
 }
