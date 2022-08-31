@@ -1,0 +1,32 @@
+.contacts {
+  &__text {
+    max-width: 530px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: var(--light-color);
+  }
+
+  &__icons-wrapper {
+    @include flex-v-center;
+  }
+
+  &__icon {
+    @include mr(40px);
+  }
+
+  &__illustration {
+
+  }
+
+  &__illustration-content {
+  }
+}

@@ -122,7 +122,7 @@ svg {
 }
 
 .full-page {
-  transform: translateY(-200vh);
+  transform: translateY(-300vh);
 }
 
 .title {
@@ -221,4 +221,20 @@ svg {
   align-items: center;
   padding-left: 170px;
   height: 100vh;
+}
+
+.icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  color: var(--light-color);
+  filter: drop-shadow(3px 3px 10px var(--dark-color));
+}
+
+.illustration {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
 }

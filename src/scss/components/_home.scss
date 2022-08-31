@@ -9,13 +9,8 @@
   }
 
   &__illustration {
-    position: absolute;
-    right: 8%;
-    top: 50%;
-    z-index: -1;
     width: 650px;
     height: 650px;
-    transform: translateY(-50%);
   }
 
   &__img {

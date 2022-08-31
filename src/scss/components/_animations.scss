@@ -107,21 +107,21 @@
 
 @keyframes hidden {
   from {
-    opacity: 1;
+    opacity: 0;
   }
 
-  from {
-    opacity: 0;
+  to {
+    opacity: 1;
   }
 }
 
 @keyframes visible {
   from {
-    opacity: 0;
+    opacity: 1;
   }
 
-  from {
-    opacity: 1;
+  to {
+    opacity: 0;
   }
 }
 
@@ -170,6 +170,28 @@
   }
 }
 
+@keyframes mouthMove {
+  from {
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+
+  25% {
+    transform: translateX(-50%) scale(1) translateY(5px);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+
+  75% {
+    transform: translateX(-50%) scale(1) translateY(5px);
+  }
+
+  from {
+    transform: translateX(-50%) scale(1) translateY(0);
+  }
+}
+
 @keyframes mouth {
   from {
     transform: translateX(-50%) scale(0);
@@ -187,5 +209,27 @@
 
   to {
     transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes language {
+  from {
+    transform: translateY(100%);
+  }
+
+  25% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  75% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100%);
   }
 }

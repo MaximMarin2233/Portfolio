@@ -1,11 +1,9 @@
 @media (hover: hover) and (pointer: fine) {
-  .social {
-    &__link {
-      &:hover {
-        color: rgb(255 255 255 / 60%);
-        transition-delay: 1000ms;
-        animation: tada 1000ms;
-      }
+  .icon {
+    &:hover {
+      color: rgb(255 255 255 / 60%);
+      transition-delay: 1000ms;
+      animation: tada 1000ms;
     }
   }
 
