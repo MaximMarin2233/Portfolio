@@ -1,0 +1,50 @@
+.sticky-arrow {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  &__btn {
+    position: absolute;
+    left: 15px;
+    top: 150px;
+    width: 80px;
+    height: 47px;
+    color: var(--light-color);
+    transition:
+      color 0.5s ease-in-out,
+      transform 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      left: 1px;
+      width: 35%;
+      transform-origin: 0 50%;
+    }
+
+    span,
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      border-radius: 4px;
+      height: 3px;
+      background-color: currentcolor;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    span {
+      left: 0;
+      width: 100%;
+    }
+  }
+}

@@ -2,8 +2,8 @@
   .icon {
     &:hover {
       color: rgb(255 255 255 / 60%);
-      transition-delay: 1000ms;
-      animation: tada 1000ms;
+      transition-delay: 1s;
+      animation: tada 1s;
     }
   }
 
@@ -26,8 +26,8 @@
 
     &:hover {
       color: rgb(255 255 255 / 60%);
-      transition-delay: 1000ms;
-      animation: rubberBand 1000ms;
+      transition-delay: 1s;
+      animation: rubberBand 1s;
     }
   }
 
@@ -35,6 +35,19 @@
     &__main {
       &:hover {
         color: rgb(255 255 255 / 60%);
+      }
+    }
+  }
+
+  .sticky-arrow__btn {
+    &:hover {
+      color: rgb(255 255 255 / 60%);
+      transform: translateX(-5px);
+      transition-delay: 1s;
+
+      &::before,
+      &::after {
+        animation: arrowHover 0.5s ease 2 alternate;
       }
     }
   }

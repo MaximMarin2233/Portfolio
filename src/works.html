@@ -6,8 +6,13 @@
 <body class="page__body">
   @include('partials/header.html')
   <main class="main">
-    <div class="container container--full-height">
-      @include('partials/works-detail.html')
+    @include('partials/works-detail.html')
+    @include('partials/about-work.html')
+
+    <div class="container sticky-arrow">
+      <button class="btn-reset sticky-arrow__btn" aria-label="Вернуться назад">
+        <span></span>
+      </button>
     </div>
   </main>
 

@@ -16,7 +16,6 @@ html {
 
 .page__body {
   counter-reset: pagination;
-  overflow: hidden;
   margin: 0;
   height: 100%;
   min-width: 320px;
@@ -26,6 +25,10 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #000;
+
+  &--scroll-off {
+    overflow: hidden;
+  }
 }
 
 img {
