@@ -92,10 +92,6 @@
 }
 
 @keyframes eyeScale {
-  from {
-    transform: scaleY(1);
-  }
-
   50% {
     transform: scaleY(0.7);
   }
@@ -106,31 +102,18 @@
 }
 
 @keyframes hidden {
-  from {
-    opacity: 0;
-  }
-
   to {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 @keyframes visible {
-  from {
-    opacity: 1;
-  }
-
   to {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
-@keyframes emotion {
-  from {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-
+@keyframes emotionStart {
   25% {
     transform: translateX(-50%) translateY(15px);
   }
@@ -144,37 +127,12 @@
   }
 
   to {
+    opacity: 1;
     transform: translateX(-50%) translateY(0);
   }
 }
 
-@keyframes bodyMove {
-  from {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  25% {
-    transform: translateX(-50%) translateY(5px);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  75% {
-    transform: translateX(-50%) translateY(5px);
-  }
-
-  from {
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-@keyframes mouthMove {
-  from {
-    transform: translateX(-50%) scale(1) translateY(0);
-  }
-
+@keyframes elementMove {
   25% {
     transform: translateX(-50%) scale(1) translateY(5px);
   }
@@ -192,7 +150,7 @@
   }
 }
 
-@keyframes mouth {
+@keyframes maskOpen {
   from {
     transform: translateX(-50%) scale(0);
   }
@@ -202,7 +160,7 @@
   }
 }
 
-@keyframes message {
+@keyframes messageShow {
   from {
     transform: translateX(80px) scale(0);
   }
@@ -212,11 +170,7 @@
   }
 }
 
-@keyframes language {
-  from {
-    transform: translateY(100%);
-  }
-
+@keyframes languageShow {
   25% {
     transform: translateY(0);
   }

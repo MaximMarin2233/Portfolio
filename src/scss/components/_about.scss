@@ -29,14 +29,14 @@
 
       .about__img--spiderman-body {
         animation:
-          bodyMove 1s ease 2s,
-          bodyMove 1s ease 12.2s;
+          elementMove 1s ease 2s,
+          elementMove 1s ease 11.8s;
       }
 
       .about__img--spiderman-head {
         animation:
-          bodyMove 1s ease 2.1s,
-          bodyMove 1s ease 12.3s;
+          elementMove 1s ease 2.1s,
+          elementMove 1s ease 11.9s;
       }
 
       .about__img--eye-1,
@@ -44,87 +44,92 @@
         animation:
           eyeScale 1s 1s,
           eyeScale 1s 3s,
-          hidden 1s steps(1) 2s,
+          hidden 1s steps(1, start) 2s,
           eyeScale 1s 5.5s,
           eyeScale 1s 7s,
           eyeScale 1s 11s,
           eyeScale 1s 13.7s,
           eyeScale 1s 15s,
-          visible 1s steps(1) 17s forwards,
-          hidden 1s steps(1) 20s forwards;
+          hidden 1s steps(1, start) 18s forwards,
+          visible 1s steps(1, start) 20s forwards;
       }
 
       .about__img--eye-closed-1,
       .about__img--eye-closed-2 {
         animation:
-          visible 1s steps(1) 2s,
-          hidden 1s steps(1) 17s forwards,
-          visible 1s steps(1) 20s forwards;
+          visible 1s steps(1, start) 2s,
+          visible 1s steps(1, start) 18s forwards,
+          hidden 1s steps(1, start) 20s forwards;
       }
 
       .about__img--emotion {
         animation:
-          emotion 1s steps(1) 2s,
-          emotion 1s steps(1) 12.2s;
+          emotionStart 1s steps(1, start) 2s,
+          emotionStart 1s steps(1, start) 11.8s;
+      }
+
+      .about__img--mask {
+        animation:
+          maskOpen 0.5s ease 3s forwards,
+          maskOpen 0.5s ease reverse 5.1s forwards,
+          maskOpen 0.5s ease 8s forwards,
+          elementMove 1s ease 11.9s,
+          maskOpen 0.5s ease reverse 13.3s forwards,
+          maskOpen 0.5s ease 15.5s forwards,
+          maskOpen 0.5s ease reverse 21.4s forwards;
       }
 
       .about__img--mouth {
         animation:
-          mouth 0.5s ease 3s forwards,
-          mouth 0.5s ease reverse 5.1s forwards,
-          mouth 0.5s ease 8s forwards,
-          mouthMove 1s ease 12.3s,
-          mouth 0.5s ease reverse 14s forwards,
-          mouth 0.5s ease 15.5s forwards,
-          mouth 0.5s ease reverse 21.4s forwards;
+          visible 0.4s steps(1, start) 3.5s forwards,
+          hidden 0.4s steps(1, start) 3.9s forwards,
+          visible 0.4s steps(1, start) 4.3s forwards,
+          hidden 0.4s steps(1, start) 4.7s forwards,
+          visible 0.4s steps(1, start) 8.7s forwards,
+          hidden 0.4s steps(1, start) 11.8s forwards,
+          visible 0.4s steps(1, start) 16.2s forwards,
+          hidden 0.4s steps(1, start) 18s forwards,
+          visible 0.4s steps(1, start) 18.4s forwards,
+          hidden 0.4s steps(1, start) 18.8s forwards,
+          visible 0.4s steps(1, start) 19.2s forwards,
+          hidden 0.4s steps(1, start) 21s forwards;
       }
 
-      .about__img--mouth-content {
+      .about__img--mouth-open {
         animation:
-          visible 0.4s steps(1) 3.5s,
-          visible 0.4s steps(1) 4.3s,
-          hidden 0.4s steps(1) 8.1s forwards,
-          visible 0.4s steps(1) 11.8s forwards,
-          visible 0.4s steps(1) 16.2s forwards,
-          hidden 0.4s steps(1) 18.4s,
-          visible 0.4s steps(1) 18.8s,
-          hidden 0.4s steps(1) 19.2s,
-          visible 0.4s steps(1) 19.6s,
-          hidden 0.4s steps(1) 21s forwards;
-      }
-
-      .about__img--mouth-hi {
-        animation:
-          visible 0.4s steps(1) 3.9s,
-          visible 0.4s steps(1) 4.7s,
-          hidden 0.4s steps(1) 11.8s forwards,
-          visible 0.4s steps(1) 13.5s forwards,
-          visible 0.4s steps(1) 18.4s,
-          hidden 0.4s steps(1) 18.8s,
-          visible 0.4s steps(1) 19.2s,
-          hidden 0.4s steps(1) 19.6s;
+          visible 0.4s steps(1, start) 3.9s,
+          hidden 0.4s steps(1, start) 4.3s,
+          visible 0.4s steps(1, start) 4.7s,
+          visible 0.4s steps(1, start) 11.8s forwards,
+          hidden 0.4s steps(1, start) 12.8s forwards,
+          visible 0.4s steps(1, start) 18s forwards,
+          hidden 0.4s steps(1, start) 18.4s forwards,
+          visible 0.4s steps(1, start) 18.8s forwards,
+          hidden 0.4s steps(1, start) 19.2s forwards;
       }
 
       .about__img--message {
         animation:
-          message 1s ease 3.9s forwards,
-          message 0.5s ease reverse 6s forwards;
+          messageShow 1s ease 3.9s forwards,
+          messageShow 0.5s ease reverse 6s forwards;
       }
 
       .about__img--lang {
-        animation: language 2s ease 9.5s;
+        animation: languageShow 2s ease 9.5s;
       }
 
       .about__img--sleep-1 {
         animation:
-          visible 0.4s steps(1) 18s forwards,
-          hidden 0.4s steps(1) 19.6s forwards;
+          visible 0.4s steps(1, start) 18s forwards,
+          hidden 0.4s steps(1, start) 19.6s forwards;
       }
 
       .about__img--sleep-2 {
         animation:
-          visible 0.4s steps(1) 18s forwards,
-          hidden 0.4s steps(1) 19.6s forwards;
+          visible 0.4s steps(1, start) 18s forwards,
+          hidden 0.4s steps(1, start) 18.4s forwards,
+          visible 0.4s steps(1, start) 18.8s forwards,
+          hidden 0.4s steps(1, start) 19.2s forwards;
       }
     }
   }
@@ -201,21 +206,21 @@
       }
     }
 
-    &--mouth {
+    &--mask {
       left: 50%;
       bottom: 137px;
       transform: translateX(-50%) scale(0);
       transform-origin: top;
     }
 
-    &--mouth-content {
+    &--mouth {
       @include absoluteLeftCenter;
 
       bottom: 168px;
       opacity: 0;
     }
 
-    &--mouth-hi {
+    &--mouth-open {
       @include absoluteLeftCenter;
 
       bottom: 163px;
