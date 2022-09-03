@@ -22,7 +22,7 @@
 
     &--animation {
       animation:
-        aboutIllistration 2s ease forwards,
+        aboutIllistrationShow 2s ease forwards,
         aboutIllistrationDown 1s ease 3s forwards,
         aboutIllistrationDown 1s reverse ease 5.5s forwards,
         aboutIllistrationDown 1s ease 14.5s forwards;
@@ -133,15 +133,15 @@
     position: absolute;
 
     &--spiderman-body {
-      right: 50%;
+      @include absoluteLeftCenter;
+
       top: 0;
-      transform: translateX(50%);
     }
 
     &--spiderman-head {
-      right: 50%;
+      @include absoluteLeftCenter;
+
       bottom: 10px;
-      transform: translateX(50%);
     }
 
     &--eye-1 {
@@ -168,11 +168,10 @@
 
     &--emotion {
       @include flex;
+      @include absoluteLeftCenter;
 
-      left: 50%;
       bottom: -40px;
       opacity: 0;
-      transform: translateX(-50%);
 
       &::before,
       &::after {
@@ -210,17 +209,17 @@
     }
 
     &--mouth-content {
-      left: 50%;
+      @include absoluteLeftCenter;
+
       bottom: 168px;
       opacity: 0;
-      transform: translateX(-50%);
     }
 
     &--mouth-hi {
-      left: 50%;
+      @include absoluteLeftCenter;
+
       bottom: 163px;
       opacity: 0;
-      transform: translateX(-50%);
     }
 
     &--message {
@@ -240,12 +239,12 @@
     }
 
     &--lang-wrapper {
-      left: 50%;
+      @include absoluteLeftCenter;
+
       bottom: 177px;
       overflow: hidden;
       width: 23px;
       height: 33px;
-      transform: translateX(-50%);
     }
 
     &--lang {

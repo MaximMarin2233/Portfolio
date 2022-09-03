@@ -84,3 +84,8 @@ $browser-context: 16; // Default
     content: "";
     display: block;
 }
+
+@mixin absoluteLeftCenter() {
+  left: 50%;
+  transform: translateX(-50%);
+}
