@@ -1,0 +1,17 @@
+.about-info {
+  counter-reset: info;
+  padding: 100px 0;
+  background-color: var(--grey-color);
+
+  &__content {
+    background-color: var(--grey-color);
+  }
+
+  &__text {
+    max-width: 650px;
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+  }
+}
