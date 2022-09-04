@@ -1,0 +1,75 @@
+.work-info {
+  position: relative;
+  padding: 50px 0;
+  background-color: var(--light-color);
+
+  &__content {
+    @include flex;
+  }
+
+  &__text {
+    @include mr(80px);
+
+    max-width: 480px;
+    color: var(--river-color);
+
+    &:not(:first-child) {
+      text-align: right;
+    }
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+
+    &--bigger {
+      max-width: 782px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    margin: 0;
+    font-family: "MontserratAlternates", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  &__counter {
+    @include flex;
+
+    position: absolute;
+    left: 0;
+    top: 50px;
+    align-items: center;
+    color: var(--main-color);
+
+    &::before {
+      content: "";
+      margin-right: 15px;
+      border-radius: 4px;
+      width: 100px;
+      height: 4px;
+      background-color: currentcolor;
+    }
+
+    &::after {
+      content: "";
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 60px;
+      color: currentcolor;
+    }
+
+    &:nth-child(-n+9)::after {
+      counter-increment: info;
+      content: "0" counter(info);
+    }
+  }
+}

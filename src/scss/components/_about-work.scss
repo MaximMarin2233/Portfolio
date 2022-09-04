@@ -1,0 +1,24 @@
+.about-work {
+  counter-reset: info;
+  background-color: var(--grey-color);
+
+  &__mockup {
+    padding: 100px 0;
+  }
+
+  &__mockup-img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__demo {
+    padding: 100px 0;
+  }
+
+  &__demo-content {
+    @include flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
