@@ -1,0 +1,10 @@
+.footer {
+  padding: 150px 0;
+  background-color: var(--grey-color);
+
+  &__content {
+    @include flex-v-center;
+
+    justify-content: center;
+  }
+}

@@ -1,0 +1,31 @@
+.arrow-up {
+  position: relative;
+  padding-left: 120px;
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: var(--river-color);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border-radius: 4px;
+    height: 4px;
+    background-color: currentcolor;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before {
+    left: 1px;
+    width: 33px;
+    transform-origin: 0 50%;
+  }
+
+  &::after {
+    left: 0;
+    width: 100px;
+  }
+}

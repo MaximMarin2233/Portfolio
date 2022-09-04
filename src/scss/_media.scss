@@ -51,4 +51,16 @@
       }
     }
   }
+
+  .arrow-up {
+    &:hover {
+      &::before {
+        transform: translateY(-50%) translateX(-10px) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) translateX(-10px);
+      }
+    }
+  }
 }
