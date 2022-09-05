@@ -32,6 +32,10 @@
     font-weight: 500;
     font-size: 50px;
     text-transform: uppercase;
+
+    &--not-descr {
+      margin-bottom: 0;
+    }
   }
 
   &__descr {
@@ -43,12 +47,11 @@
   }
 
   &__counter {
-    @include flex;
+    @include flex-v-center;
 
     position: absolute;
     left: 0;
     top: 50px;
-    align-items: center;
     color: var(--main-color);
 
     &::before {

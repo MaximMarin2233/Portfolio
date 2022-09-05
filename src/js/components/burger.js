@@ -15,11 +15,7 @@ export function burger() {
 
   menuItems?.forEach(el => {
     el.addEventListener('click', () => {
-      burger?.setAttribute('aria-expanded', 'false');
-      burger?.setAttribute('aria-label', 'Открыть меню');
-      burger.classList.remove('burger--active');
-      menu.classList.remove('burger-menu--active');
-      enableScroll();
+      burgerClick();
     });
   });
 

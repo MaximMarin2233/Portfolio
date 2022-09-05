@@ -16,17 +16,17 @@
 
   &::before,
   &__line {
+    position: absolute;
     border-radius: 3px;
+    height: var(--burger-line-height);
+    background-color: currentcolor;
   }
 
   &::before {
     content: "";
-    position: absolute;
     right: 0;
     top: 0;
     width: 70%;
-    height: var(--burger-line-height);
-    background-color: currentcolor;
     transition:
       transform 0.3s ease-in-out,
       top 0.3s ease-in-out,
@@ -34,12 +34,9 @@
   }
 
   &__line {
-    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: var(--burger-line-height);
-    background-color: currentcolor;
     transition:
       transform 0.3s ease-in-out,
       bottom 0.3s ease-in-out;
@@ -49,17 +46,14 @@
     @include flex-all-center;
 
     position: fixed;
-    left: 0;
-    top: 0;
     z-index: 98;
-    width: 100%;
-    height: 100%;
     background-image: linear-gradient(257.37deg, #ff4d5a 0%, rgb(23 49 115 / 80%) 99.99%, rgb(37 70 185 / 50%) 100%);
     visibility: hidden;
     transform: translateY(-100%);
     transition:
       transform 0.5s ease-in-out,
       visibility 0.5s ease-in-out;
+    inset: 0;
 
     &__item {
       @include mb(50px);

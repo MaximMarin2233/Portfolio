@@ -159,16 +159,19 @@
       bottom: 67px;
     }
 
+    &--eye-closed-1,
+    &--eye-closed-2 {
+      opacity: 0;
+    }
+
     &--eye-closed-1 {
       left: 9px;
       bottom: 90px;
-      opacity: 0;
     }
 
     &--eye-closed-2 {
       right: 9px;
       bottom: 90px;
-      opacity: 0;
     }
 
     &--emotion {
@@ -263,9 +266,8 @@
       height: 75px;
     }
 
-    &--sleep-1 {
-      right: 0;
-      top: 0;
+    &--sleep-1,
+    &--sleep-2 {
       width: 40%;
       height: 40%;
       font-weight: 700;
@@ -273,14 +275,14 @@
       opacity: 0;
     }
 
+    &--sleep-1 {
+      right: 0;
+      top: 0;
+    }
+
     &--sleep-2 {
       left: 0;
       bottom: 0;
-      width: 40%;
-      height: 40%;
-      font-weight: 700;
-      font-size: 30px;
-      opacity: 0;
     }
   }
 }
