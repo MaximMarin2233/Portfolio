@@ -12,7 +12,7 @@
         <picture>
           <source srcset="img/about-me/about-me-img.avif" type="image/avif">
           <source srcset="img/about-me/about-me-img.webp" type="image/webp">
-          <img loading="lazy" src="img/about-me/about-me-img.jpg" class="image" width="650" height="610" alt="Человек, имя которого - Максим, стоит оперев руки на стул">
+          <img class="about-info__img" loading="lazy" src="img/about-me/about-me-img.jpg" width="600" height="550" alt="Человек, имя которого - Максим, стоит оперев руки на стул">
         </picture>
       </div>
     </div>
@@ -28,160 +28,105 @@
   </div>
   <div class="about-info__skills">
     <div class="container container--smaller">
-      <div class="about-info__skills-content">
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/figma-logo.svg" width="53" height="80" alt="Логотип Figma">
+      <ul class="list-reset skills-list">
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/figma-logo.svg" width="60" height="60" alt="Логотип Figma">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">Figma</h2>
+              <div class="skills-list__value skills-list__value--red">80</div>
             </div>
-            <h2 class="skill-card__title">Figma</h2>
-            <div class="skill-card__value skill-card__value--red" data-percent>80</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/html-css-logo.svg" width="80" height="72" alt="Логотип HTML/CSS">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/html-css-logo.svg" width="60" height="60" alt="Логотип HTML/CSS">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">HTML/CSS</h2>
+              <div class="skills-list__value skills-list__value--red">80</div>
             </div>
-            <h2 class="skill-card__title">HTML/CSS</h2>
-            <div class="skill-card__value skill-card__value--red" data-percent>80</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/sass-logo.svg" width="80" height="60" alt="Логотип Sass">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/sass-logo.svg" width="60" height="60" alt="Логотип Sass">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">Sass</h2>
+              <div class="skills-list__value skills-list__value--red">80</div>
             </div>
-            <h2 class="skill-card__title">Sass</h2>
-            <div class="skill-card__value skill-card__value--red" data-percent>80</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/git-logo.svg" width="80" height="80" alt="Логотип Git">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/git-logo.svg" width="60" height="60" alt="Логотип Git">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">Git</h2>
+              <div class="skills-list__value skills-list__value--red">70</div>
             </div>
-            <h2 class="skill-card__title">Git</h2>
-            <div class="skill-card__value" data-percent>70</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/photoshop-logo.svg" width="80" height="80" alt="Логотип Photoshop">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/photoshop-logo.svg" width="60" height="60" alt="Логотип Photoshop">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">Photoshop</h2>
+              <div class="skills-list__value skills-list__value--red">60</div>
             </div>
-            <h2 class="skill-card__title">Photoshop</h2>
-            <div class="skill-card__value" data-percent>60</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/js-logo.svg" width="80" height="80" alt="Логотип JavaScript">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/js-logo.svg" width="60" height="60" alt="Логотип JavaScript">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">JavaScript</h2>
+              <div class="skills-list__value skills-list__value--red">60</div>
             </div>
-            <h2 class="skill-card__title">JavaScript</h2>
-            <div class="skill-card__value" data-percent>60</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/w3c-logo.svg" width="80" height="80" alt="Логотип WCAG">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/w3c-logo.svg" width="60" height="60" alt="Логотип WCAG">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">
+                <span class="skills-list__title-text">
+                  WCAG
+                </span>
+                <span class="tooltip">
+                  <button class="btn-reset tooltip__btn" aria-describedby="wcag-info" data-tooltip>
+                    <svg>
+                      <use xlink:href="img/sprite.svg#tooltip-info"></use>
+                    </svg>
+                  </button>
+                  <span class="tooltip__txt" role="tooltip" id="wcag-info">
+                    <span class="visually-hidden">Тултип: </span>
+                    <div class="tooltip__content">
+                      Руководство по обеспечению доступности веб-контента
+                    </div>
+                  </span>
+                </span>
+              </h2>
+              <div class="skills-list__value skills-list__value--red">60</div>
             </div>
-            <h2 class="skill-card__title">WCAG</h2>
-            <div class="skill-card__value" data-percent>60</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-        <div class="skill-card" data-card>
-          <div class="skill-card__text">
-            <div class="skill-card__img-wrapper">
-              <img class="skill-card__img" loading="lazy" src="img/skills/wp-logo.svg" width="80" height="80" alt="Логотип WordPress">
+        </li>
+        <li class="skills-list__card">
+          <img class="skills-list__img" loading="lazy" src="img/skills/wp-logo.svg" width="60" height="60" alt="Логотип WordPress">
+          <div class="skills-list__content">
+            <div class="skills-list__text">
+              <h2 class="skills-list__title">WordPress</h2>
+              <div class="skills-list__value skills-list__value--red">50</div>
             </div>
-            <h2 class="skill-card__title">WordPress</h2>
-            <div class="skill-card__value" data-percent>50</div>
+            <div class="skills-list__bar"></div>
           </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#072142" stroke-width="15" data-circleBg />
-            </svg>
-          </div>
-          <div class="skill-card__circle">
-            <svg class="skill-card__svg">
-              <circle cx="50%" cy="50%" fill="transparent" stroke="#ff4d5a" stroke-width="15" data-circle />
-            </svg>
-          </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

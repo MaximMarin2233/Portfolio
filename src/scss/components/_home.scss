@@ -4,25 +4,22 @@
   }
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-transform: uppercase;
   }
 
   &__illustration {
-    width: 650px;
-    height: 650px;
+    width: 600px;
+    height: 600px;
   }
 
   &__img {
     position: absolute;
 
     &--moon {
-      left: 0;
-      top: 0;
       border-radius: 100%;
-      width: 100%;
-      height: 100%;
       background-image: linear-gradient(180deg, #fff 0%, #81b3dd 100%);
+      inset: 0;
     }
 
     &--moon-content {

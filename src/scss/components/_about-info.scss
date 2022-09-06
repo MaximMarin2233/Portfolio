@@ -1,6 +1,6 @@
 .about-info {
   counter-reset: info;
-  padding: 100px 0;
+  padding: 40px 0 0;
   background-color: var(--grey-color);
 
   &__content {
@@ -8,21 +8,14 @@
   }
 
   &__text {
-    max-width: 650px;
+    max-width: 600px;
   }
 
   &__descr {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__skills {
     padding: 30px 0;
-  }
-
-  &__skills-content {
-    @include flex;
-
-    flex-wrap: wrap;
-    margin-right: -100px;
   }
 }

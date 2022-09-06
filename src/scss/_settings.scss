@@ -47,6 +47,10 @@ svg {
   object-fit: cover;
 }
 
+.site-container {
+  overflow: hidden;
+}
+
 .is-hidden {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
@@ -129,22 +133,22 @@ svg {
 
 .full-page {
   counter-reset: pagination;
-  transform: translateY(-200vh);
+  transform: translateY(-300vh);
 }
 
 .title {
   position: relative;
   margin: 0;
   font-weight: 500;
-  font-size: 100px;
-  line-height: 120px;
+  font-size: 90px;
+  line-height: 110px;
   letter-spacing: 0.1em;
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -20px;
+    bottom: -25px;
     border-radius: 4px;
     width: 50%;
     height: 4px;
@@ -160,7 +164,7 @@ svg {
   z-index: -1;
   margin: 0;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 70px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--main-color);
@@ -190,7 +194,7 @@ svg {
   margin: 0;
   font-family: "MontserratAlternates", sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 40px;
 }
 
@@ -205,12 +209,12 @@ svg {
 
 .moon-bg {
   position: absolute;
-  right: 10%;
+  right: 11%;
   top: 50%;
   z-index: -2;
   border-radius: 100%;
-  width: 600px;
-  height: 600px;
+  width: 550px;
+  height: 550px;
   box-shadow:
     0 0 0 400px rgb(237 244 250 / 5%),
     0 0 0 320px rgb(237 244 250 / 5%),
@@ -232,15 +236,15 @@ svg {
 
 .icon {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   color: var(--light-color);
   filter: drop-shadow(3px 3px 10px var(--dark-color));
 }
 
 .illustration {
   position: absolute;
-  right: 8%;
+  right: 9%;
   top: 50%;
   z-index: -1;
   transform: translateY(-50%);

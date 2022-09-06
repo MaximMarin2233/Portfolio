@@ -1,14 +1,14 @@
 import './components/burger';
-import './components/circle';
+import './components/tooltip';
 
 
 import { burger } from "./components/burger";
-import { circle } from "./components/circle";
+import { tooltip } from "./components/tooltip";
 
 
 window.addEventListener('DOMContentLoaded', () => {
   burger();
-  circle();
+  tooltip();
   // setTimeout(() => {
   //   document.querySelector('.about__illustration').classList.add('about__illustration--animation');
   // }, 50);

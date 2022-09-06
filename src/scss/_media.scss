@@ -63,4 +63,19 @@
       }
     }
   }
+
+  .tooltip {
+    &__btn {
+      &:hover,
+      &:focus {
+        outline: 1px solid var(--main-color);
+        color: var(--main-color);
+
+        + .tooltip__txt {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
 }

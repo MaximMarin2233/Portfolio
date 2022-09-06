@@ -4,20 +4,22 @@
 @include('partials/head.html')
 
 <body class="page__body">
-  @include('partials/header.html')
-  <main class="main">
-    @include('partials/about-me.html')
-    @include('partials/about-info.html')
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/about-me.html')
+      @include('partials/about-info.html')
 
-    <div class="container sticky-arrow">
-      <button class="btn-reset sticky-arrow__btn" aria-label="Вернуться назад">
-        <span></span>
-      </button>
-    </div>
-  </main>
+      <div class="container sticky-arrow">
+        <button class="btn-reset sticky-arrow__btn" aria-label="Вернуться назад">
+          <span></span>
+        </button>
+      </div>
+    </main>
 
-  @include('partials/footer.html')
-  <!-- @include('html/h1.html') пример include -->
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
 </body>
 
 </html>
