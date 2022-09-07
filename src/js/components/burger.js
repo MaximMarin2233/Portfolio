@@ -8,9 +8,6 @@ export function burger() {
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const menuItemsInside = document?.querySelectorAll('.burger-menu__link-inside');
 
-  const mainTag = document.querySelector('.main');
-  const footerTag = document.querySelector('.footer');
-
   burger?.addEventListener('click', burgerClick);
 
   menuItems?.forEach(el => {
@@ -39,15 +36,23 @@ export function burger() {
       burger?.setAttribute('aria-label', 'Закрыть меню');
       disableScroll();
 
-      mainTag.inert = true;
-      footerTag.inert = true;
+      inertToggle(true);
     } else {
       burger?.setAttribute('aria-expanded', 'false');
       burger?.setAttribute('aria-label', 'Открыть меню');
       enableScroll();
 
-      mainTag.inert = false;
-      footerTag.inert = false;
+      inertToggle(false);
     }
+  }
+
+  function inertToggle(value) {
+    const elements = [document.querySelector('.main'), document.querySelector('.footer'), document.querySelector('.footer-main')];
+
+    elements.forEach(item => {
+      if(item) {
+        item.inert = value;
+      }
+    });
   }
 }

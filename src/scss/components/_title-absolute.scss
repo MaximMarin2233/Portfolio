@@ -1,0 +1,33 @@
+.title-absolute {
+  @include absoluteLeftCenter;
+
+  position: absolute;
+  bottom: 80px;
+  z-index: -1;
+  margin: 0;
+  font-weight: 700;
+  font-size: 70px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--main-color);
+  pointer-events: none;
+
+  &--number {
+    font-size: 100px;
+    color: var(--light-color);
+
+    &:nth-child(-n + 9) {
+      &::before {
+        counter-increment: pagination;
+        content: "0" counter(pagination);
+      }
+    }
+
+    &:nth-child(n + 10) {
+      &::before {
+        counter-increment: pagination;
+        content: counter(pagination);
+      }
+    }
+  }
+}

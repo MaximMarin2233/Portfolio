@@ -4,7 +4,9 @@ export function tooltip() {
   const el = document.querySelector('[data-tooltip]');
   const tooltip = document.querySelector('#wcag-info');
 
-  createPopper(el, tooltip, {
-    placement: 'top'
-  });
+  if (el) {
+    createPopper(el, tooltip, {
+      placement: 'top'
+    });
+  }
 }
