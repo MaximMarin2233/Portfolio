@@ -8,9 +8,11 @@ import { burger } from "./components/burger";
 import { tooltip } from "./components/tooltip";
 import { skillBar } from "./components/skill-bar";
 import { scroll } from "./components/scroll";
+import { sectionHash } from "./components/scroll";
 
 
 window.addEventListener('DOMContentLoaded', () => {
+  sectionHash();
   burger();
   tooltip();
   skillBar();

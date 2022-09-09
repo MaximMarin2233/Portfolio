@@ -1,35 +1,73 @@
+const fullPage = document.querySelector('.full-page');
+
+let anchors = document.querySelectorAll('[data-anchor]');
+let anchorsPos = {};
+let anchorsPosArr = [];
+
+if(fullPage) {
+  anchors.forEach((item, i) => {
+    anchorsPos[item.dataset.anchor] = i;
+    anchorsPosArr[i] = item.dataset.anchor;
+  });
+}
+
 export function scroll() {
-  const fullPage = document.querySelector('.full-page');
-
   if(fullPage) {
-    let valScroll = 0;
-    let pagination = 0;
-    let anchors = document.querySelectorAll('[data-anchor]');
-
     window.addEventListener('wheel', pageScroll);
 
+    let lastStage;
+
     function pageScroll(e) {
-      let bodyHeight = document.body.offsetHeight;
-
       if(e.deltaY < 0) {
-        console.log('scrollTop');
-      } else if(e.deltaY > 0) {
-        console.log('scrollBottom');
+        if(location.hash) {
+          let stage = anchorsPos[location.hash.slice(1)] - 1;
+          if(stage >= 0) {
+            location.hash = anchorsPosArr[stage];
+            lastStage = stage;
+          } else {
+            console.log(lastStage);
+            if(lastStage - 1 >= 0) {
+              location.hash = anchorsPosArr[lastStage - 1];
+            }
+          }
 
-        valScroll += document.body.offsetHeight;
-
-        if(valScroll <= anchorsLength) {
-          fullPage.style.transform = `translateY(-${valScroll}px)`;
-
+          return;
         }
 
+      } else if(e.deltaY > 0) {
+        if(location.hash) {
+          let stage = anchorsPos[location.hash.slice(1)] + 1;
+          if(stage < 4) {
+            location.hash = anchorsPosArr[stage];
+            lastStage = stage;
+          } else {
+            console.log(lastStage);
+            if(lastStage + 1 < 4) {
+              location.hash = anchorsPosArr[lastStage + 1];
+            } else if(!lastStage) {
+              location.hash = anchorsPosArr[1];
+            }
+          }
+
+          return;
+        }
+        location.hash = anchorsPosArr[1];
       }
 
     }
 
     window.addEventListener("hashchange", () => {
-      console.log(location.hash);
-      location.hash = 'about';
+      sectionHash();
     });
+  }
+}
+
+export function sectionHash() {
+  if(fullPage) {
+    let anchor = anchorsPos[location.hash.slice(1)];
+
+    if(anchor || anchor === 0) {
+      fullPage.style.transform = `translateY(-${anchor * document.body.offsetHeight}px)`;
+    }
   }
 }

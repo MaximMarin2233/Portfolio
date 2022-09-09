@@ -1,8 +1,8 @@
 .pagination {
   @include flex;
 
-  position: absolute;
-  left: 0;
+  position: fixed;
+  left: 15px;
   top: 50%;
   z-index: -2;
   flex-direction: column;
