@@ -217,14 +217,6 @@ svg {
   filter: drop-shadow(3px 3px 10px var(--dark-color));
 }
 
-.illustration {
-  position: absolute;
-  right: 9%;
-  top: 50%;
-  z-index: -1;
-  transform: translateY(-50%);
-}
-
 .title.anim {
   &::after {
     transform: translateX(-100%);
@@ -232,7 +224,9 @@ svg {
 }
 
 .anim {
-  transition: transform 0.1s ease-in-out;
+  transition:
+    transform 0.1s ease-in-out,
+    opacity 0.1s ease-in-out;
 
   &--left {
     transform: translateX(-100%);
@@ -240,6 +234,15 @@ svg {
 
   &--bottom {
     transform: translateY(100%);
+  }
+
+  &--right {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  &--opacity {
+    opacity: 0;
   }
 }
 
@@ -252,11 +255,23 @@ svg {
   }
 
   .anim {
+    opacity: 1;
     transform: translate(0);
-    transition: transform 0.7s ease-in-out calc(var(--delay) * 1);
+    transition:
+      transform 0.7s ease-in-out calc(var(--delay) * 1),
+      opacity 0.4s ease-in-out calc(var(--delay) * 1);
   }
 }
 
 [data-text] {
   overflow: hidden;
+}
+
+.illustration {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  z-index: -1;
+  overflow: visible;
+  transform: translateY(-50%);
 }

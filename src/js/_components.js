@@ -21,7 +21,4 @@ window.addEventListener('DOMContentLoaded', () => {
   scroll();
   parallax();
   scrollAnim();
-  // setTimeout(() => {
-  //   document.querySelector('.about__illustration').classList.add('about__illustration--animation');
-  // }, 2000);
 });

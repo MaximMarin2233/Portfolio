@@ -18,6 +18,8 @@ export function scroll() {
 
   let footerMain = document.querySelector('.footer-main');
 
+  let aboutAnim = document.querySelector('.about__illustration');
+
   if(fullPage) {
     setInert();
     anchors[0].inert = false;
@@ -113,6 +115,12 @@ export function scroll() {
           footerMain.classList.add('footer-main--active');
         } else {
           footerMain.classList.remove('footer-main--active');
+        }
+
+        if(anchorsPos[location.hash.slice(1)] == 2) {
+          setTimeout(() => {
+            aboutAnim.classList.add('about__illustration--animation');
+          }, 2000);
         }
       }
     }

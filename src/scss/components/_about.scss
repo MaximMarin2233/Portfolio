@@ -1,4 +1,6 @@
 .about {
+  overflow: hidden;
+
   &__title {
     margin-bottom: 50px;
   }
@@ -13,7 +15,6 @@
     top: 0;
     width: 182px;
     height: 816px;
-    opacity: 0;
     transform: translateY(-100%);
     pointer-events: none;
 

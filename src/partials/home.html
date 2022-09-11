@@ -6,14 +6,16 @@
       дизайнер / <br> веб-разработчик
     </div>
   </div>
-  <div class="illustration home__illustration">
+  <div class="illustration home__illustration" data-text>
     <div class="js-parallax">
-      <div class="home__img home__img--moon" data-depth="0.18"></div>
+      <div class="home__img home__img--moon-wrapper" data-depth="0.18">
+        <div class="home__img home__img--moon anim anim--right" style="--delay: 500ms;"></div>
+      </div>
     </div>
     <div class="home__img-wrapper">
       <div class="js-parallax">
         <div class="home__img home__img--moon-content" data-depth="0.17">
-          <svg>
+          <svg class="anim anim--opacity" style="--delay: 1200ms;">
             <use xlink:href="img/sprite.svg#max" fill="url(#moon-gradient)"></use>
             <defs>
               <linearGradient id="moon-gradient" x1="257.991" y1="132.254" x2="257.991" y2="561.92" gradientUnits="userSpaceOnUse">
@@ -28,7 +30,7 @@
     <div class="home__cloud-wrapper home__cloud-wrapper--1">
       <div class="js-parallax">
         <div class="home__img home__img--cloud" data-depth="0.24">
-          <svg>
+          <svg class="anim anim--right" style="--delay: 700ms;">
             <use xlink:href="img/sprite.svg#cloud"></use>
           </svg>
         </div>
@@ -37,7 +39,7 @@
     <div class="home__cloud-wrapper home__cloud-wrapper--2">
       <div class="js-parallax">
         <div class="home__img home__img--cloud" data-depth="0.22">
-          <svg>
+          <svg class="anim anim--right" style="--delay: 900ms;">
             <use xlink:href="img/sprite.svg#cloud"></use>
           </svg>
         </div>
@@ -46,7 +48,7 @@
     <div class="home__cloud-wrapper home__cloud-wrapper--3">
       <div class="js-parallax">
         <div class="home__img home__img--cloud" data-depth="0.2">
-          <svg>
+          <svg class="anim anim--right" style="--delay: 1100ms;">
             <use xlink:href="img/sprite.svg#cloud"></use>
           </svg>
         </div>
@@ -56,7 +58,7 @@
   <div class="title-absolute" data-text>
     <div class="js-parallax">
       <h3 class="home__subtitle" data-depth="0.17">
-        <span class="home__subtitle-content anim anim--bottom" style="--delay: 600ms;">Портфолио</span>
+        <span class="title-absolute__text home__subtitle-content anim anim--bottom" style="--delay: 600ms;">Портфолио</span>
       </h3>
     </div>
   </div>
