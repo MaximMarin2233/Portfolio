@@ -191,6 +191,11 @@ svg {
     0 0 0 80px rgb(237 244 250 / 5%);
   background-color: rgb(237 244 250 / 29%);
   transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+
+  &--hidden {
+    transform: translateY(-50%) scale(0);
+  }
 }
 
 .section-default {

@@ -5,6 +5,7 @@
   bottom: 0;
   padding-bottom: 80px;
   transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
 
   &__content {
     @include flex-all-center;
@@ -14,5 +15,9 @@
     font-weight: 500;
     font-size: 60px;
     color: var(--light-color);
+  }
+
+  &--active {
+    transform: translateY(0);
   }
 }

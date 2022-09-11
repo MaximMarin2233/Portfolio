@@ -13,6 +13,10 @@ let anchorsPosArr = [];
 
 let pagination = document.querySelectorAll('.pagination__link');
 
+let moonBg = document.querySelector('.moon-bg');
+
+let footerMain = document.querySelector('.footer-main');
+
 if(fullPage) {
   setInert();
   anchors[0].inert = false;
@@ -96,6 +100,18 @@ export function sectionHash() {
 
       paginationReset();
       pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
+
+      if(anchor == 2 || anchor == 3) {
+        moonBg.classList.add('moon-bg--hidden');
+      } else {
+        moonBg.classList.remove('moon-bg--hidden');
+      }
+
+      if(anchor == 3) {
+        footerMain.classList.add('footer-main--active');
+      } else {
+        footerMain.classList.remove('footer-main--active');
+      }
     }
   }
 }

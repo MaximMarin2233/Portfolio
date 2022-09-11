@@ -15,14 +15,6 @@
     color: var(--light-color);
   }
 
-  &__icons-wrapper {
-    @include flex-v-center;
-  }
-
-  &__icon {
-    @include mr(40px);
-  }
-
   &__illustration {
     width: 600px;
     height: 600px;

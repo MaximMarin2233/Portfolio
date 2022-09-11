@@ -43,11 +43,14 @@
     &:hover {
       color: rgb(255 255 255 / 60%);
       transform: translateX(-5px);
-      transition-delay: 800ms;
+      transition-delay: 600ms;
 
-      &::before,
+      &::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
       &::after {
-        animation: arrowHover 0.4s ease 2 alternate;
+        transform: translateY(-50%) rotate(-45deg);
       }
     }
   }
@@ -76,6 +79,12 @@
           visibility: visible;
         }
       }
+    }
+  }
+
+  .pagination__link {
+    &:hover {
+      background-color: var(--main-color);
     }
   }
 }
