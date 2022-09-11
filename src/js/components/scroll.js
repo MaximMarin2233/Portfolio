@@ -14,7 +14,7 @@ export function scroll() {
 
   let pagination = document.querySelectorAll('.pagination__link');
 
-  let moonBg = document.querySelector('.moon-bg');
+  let moonBg = document.querySelector('.moon-bg-wrapper');
 
   let footerMain = document.querySelector('.footer-main');
 
@@ -104,9 +104,9 @@ export function scroll() {
         pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
 
         if(anchor == 2 || anchor == 3) {
-          moonBg.classList.add('moon-bg--hidden');
+          moonBg.classList.add('moon-bg-wrapper--hidden');
         } else {
-          moonBg.classList.remove('moon-bg--hidden');
+          moonBg.classList.remove('moon-bg-wrapper--hidden');
         }
 
         if(anchor == 3) {

@@ -166,7 +166,7 @@ svg {
   line-height: 40px;
 }
 
-.stars {
+.stars-wrapper {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -175,11 +175,20 @@ svg {
   transform: translateY(-50%);
 }
 
-.moon-bg {
+.moon-bg-wrapper {
   position: absolute;
   right: 11%;
   top: 50%;
   z-index: -2;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+
+  &--hidden {
+    transform: translateY(-50%) scale(0);
+  }
+}
+
+.moon-bg {
   border-radius: 100%;
   width: 550px;
   height: 550px;
@@ -190,12 +199,6 @@ svg {
     0 0 0 160px rgb(237 244 250 / 5%),
     0 0 0 80px rgb(237 244 250 / 5%);
   background-color: rgb(237 244 250 / 29%);
-  transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
-
-  &--hidden {
-    transform: translateY(-50%) scale(0);
-  }
 }
 
 .section-default {

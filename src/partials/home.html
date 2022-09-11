@@ -1,39 +1,61 @@
 <section class="section-default home" data-anchor="home">
   <h1 class="visually-hidden">Максим Марьин - Дизайнер / Веб-разработчик</h1>
   <div class="home__text">
-    <h2 class="title home__title">Максим Марьин</h2>
+    <h2 class="title home__title">Максим <br> Марьин</h2>
     <div class="descr home__descr">
       дизайнер / <br> веб-разработчик
     </div>
   </div>
   <div class="illustration home__illustration">
-    <div class="home__img home__img--moon"></div>
-    <div class="home__img home__img--moon-content">
-      <svg>
-        <use xlink:href="img/sprite.svg#max" fill="url(#moon-gradient)"></use>
-        <defs>
-          <linearGradient id="moon-gradient" x1="257.991" y1="132.254" x2="257.991" y2="561.92" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#04112F"/>
-          <stop offset="1" stop-color="#051A5E"/>
-          </linearGradient>
-        </defs>
-      </svg>
+    <div class="js-parallax">
+      <div class="home__img home__img--moon" data-depth="0.18"></div>
     </div>
-    <div class="home__img home__img--cloud-1">
-      <svg>
-        <use xlink:href="img/sprite.svg#cloud"></use>
-      </svg>
+    <div class="home__img-wrapper">
+      <div class="js-parallax">
+        <div class="home__img home__img--moon-content" data-depth="0.17">
+          <svg>
+            <use xlink:href="img/sprite.svg#max" fill="url(#moon-gradient)"></use>
+            <defs>
+              <linearGradient id="moon-gradient" x1="257.991" y1="132.254" x2="257.991" y2="561.92" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#04112F"/>
+              <stop offset="1" stop-color="#051A5E"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
     </div>
-    <div class="home__img home__img--cloud-2">
-      <svg>
-        <use xlink:href="img/sprite.svg#cloud"></use>
-      </svg>
+    <div class="home__cloud-wrapper home__cloud-wrapper--1">
+      <div class="js-parallax">
+        <div class="home__img home__img--cloud" data-depth="0.24">
+          <svg>
+            <use xlink:href="img/sprite.svg#cloud"></use>
+          </svg>
+        </div>
+      </div>
     </div>
-    <div class="home__img home__img--cloud-3">
-      <svg>
-        <use xlink:href="img/sprite.svg#cloud"></use>
-      </svg>
+    <div class="home__cloud-wrapper home__cloud-wrapper--2">
+      <div class="js-parallax">
+        <div class="home__img home__img--cloud" data-depth="0.22">
+          <svg>
+            <use xlink:href="img/sprite.svg#cloud"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="home__cloud-wrapper home__cloud-wrapper--3">
+      <div class="js-parallax">
+        <div class="home__img home__img--cloud" data-depth="0.2">
+          <svg>
+            <use xlink:href="img/sprite.svg#cloud"></use>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
-  <h3 class="title-absolute home__subtitle">Портфолио</h3>
+  <div class="title-absolute">
+    <div class="js-parallax">
+      <h3 class="home__subtitle" data-depth="0.17">Портфолио</h3>
+    </div>
+  </div>
 </section>
