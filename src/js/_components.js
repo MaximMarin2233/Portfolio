@@ -19,5 +19,5 @@ window.addEventListener('DOMContentLoaded', () => {
   scroll();
   // setTimeout(() => {
   //   document.querySelector('.about__illustration').classList.add('about__illustration--animation');
-  // }, 50);
+  // }, 2000);
 });

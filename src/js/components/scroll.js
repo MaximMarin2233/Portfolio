@@ -14,7 +14,7 @@ let anchorsPosArr = [];
 let pagination = document.querySelectorAll('.pagination__link');
 
 if(fullPage) {
-  // setInert();
+  setInert();
   anchors[0].inert = false;
 
   anchors.forEach((item, i) => {
@@ -29,43 +29,48 @@ export function scroll() {
   if(fullPage) {
     window.addEventListener('wheel', pageScroll);
 
-    let lastStage;
+    let lastStage = anchorsPos[location.hash.slice(1)] || 0;
 
     function pageScroll(e) {
-      if(e.deltaY < 0) {
-        if(location.hash) {
-          let stage = anchorsPos[location.hash.slice(1)] - 1;
-          if(stage >= 0) {
-            location.hash = anchorsPosArr[stage];
-            lastStage = stage;
-          } else {
-            console.log(lastStage);
-            if(lastStage - 1 >= 0) {
-              location.hash = anchorsPosArr[lastStage - 1];
+      // window.removeEventListener('wheel', pageScroll);
+      // setTimeout(() => {
+      //   window.addEventListener('wheel', pageScroll);
+      // }, 500);
+
+      if(!e.ctrlKey) {
+        if(e.deltaY < 0) {
+          if(location.hash) {
+            let stage = anchorsPos[location.hash.slice(1)] - 1;
+            if(stage >= 0) {
+              location.hash = anchorsPosArr[stage];
+              lastStage = stage;
+            } else {
+              console.log(lastStage);
+              if(lastStage - 1 >= 0) {
+                location.hash = anchorsPosArr[lastStage - 1];
+              }
             }
+
+            return;
           }
 
-          return;
-        }
-
-      } else if(e.deltaY > 0) {
-        if(location.hash) {
-          let stage = anchorsPos[location.hash.slice(1)] + 1;
-          if(stage < 4) {
-            location.hash = anchorsPosArr[stage];
-            lastStage = stage;
-          } else {
-            console.log(lastStage);
-            if(lastStage + 1 < 4) {
-              location.hash = anchorsPosArr[lastStage + 1];
-            } else if(!lastStage) {
-              location.hash = anchorsPosArr[1];
+        } else if(e.deltaY > 0) {
+          if(location.hash) {
+            let stage = anchorsPos[location.hash.slice(1)] + 1;
+            if(stage < 4) {
+              location.hash = anchorsPosArr[stage];
+              lastStage = stage;
+            } else {
+              console.log(lastStage);
+              if(lastStage + 1 < 4) {
+                location.hash = anchorsPosArr[lastStage + 1];
+              }
             }
-          }
 
-          return;
+            return;
+          }
+          location.hash = anchorsPosArr[1];
         }
-        location.hash = anchorsPosArr[1];
       }
 
     }
@@ -82,14 +87,15 @@ export function sectionHash() {
 
     if(anchor || anchor === 0) {
       fullPage.style.transform = `translateY(-${anchor * document.body.offsetHeight}px)`;
-      // setInert();
-      // anchors.forEach(item => {
-      //   if(item.dataset.anchor == location.hash.slice(1)) {
-      //     item.inert = false;
-      //   }
-      // });
+      setInert();
+      anchors.forEach(item => {
+        if(item.dataset.anchor == location.hash.slice(1)) {
+          item.inert = false;
+        }
+      });
 
-      // paginationReset();
+      paginationReset();
+      pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
     }
   }
 }
