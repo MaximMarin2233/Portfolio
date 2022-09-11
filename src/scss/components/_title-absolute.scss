@@ -2,11 +2,12 @@
   @include absoluteLeftCenter;
 
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   z-index: -1;
   margin: 0;
   font-weight: 700;
   font-size: 70px;
+  line-height: 70px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--main-color);

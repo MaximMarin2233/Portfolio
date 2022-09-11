@@ -55,4 +55,13 @@
       height: 267px;
     }
   }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__subtitle-content {
+    display: block;
+    padding: 10px;
+  }
 }

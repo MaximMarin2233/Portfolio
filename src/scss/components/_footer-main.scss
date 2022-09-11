@@ -19,5 +19,6 @@
 
   &--active {
     transform: translateY(0);
+    transition-delay: 0.7s;
   }
 }

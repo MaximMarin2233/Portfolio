@@ -134,8 +134,7 @@ svg {
 
 .full-page {
   counter-reset: pagination;
-
-  // transition: transform 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: transform 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .title {
@@ -181,7 +180,7 @@ svg {
   top: 50%;
   z-index: -2;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 
   &--hidden {
     transform: translateY(-50%) scale(0);
@@ -224,4 +223,40 @@ svg {
   top: 50%;
   z-index: -1;
   transform: translateY(-50%);
+}
+
+.title.anim {
+  &::after {
+    transform: translateX(-100%);
+  }
+}
+
+.anim {
+  transition: transform 0.1s ease-in-out;
+
+  &--left {
+    transform: translateX(-100%);
+  }
+
+  &--bottom {
+    transform: translateY(100%);
+  }
+}
+
+.show {
+  .title.anim {
+    &::after {
+      transform: translate(0);
+      transition: transform 0.7s ease-in-out calc(var(--delay) * 2);
+    }
+  }
+
+  .anim {
+    transform: translate(0);
+    transition: transform 0.7s ease-in-out calc(var(--delay) * 1);
+  }
+}
+
+[data-text] {
+  overflow: hidden;
 }
