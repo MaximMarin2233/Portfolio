@@ -1,35 +1,35 @@
 import { throttle } from '../functions/throttle';
 
-function resizeVal () {
-  sectionHash();
-};
-let func = throttle(resizeVal, 800);
-
-const fullPage = document.querySelector('.full-page');
-
-let anchors = document.querySelectorAll('[data-anchor]');
-let anchorsPos = {};
-let anchorsPosArr = [];
-
-let pagination = document.querySelectorAll('.pagination__link');
-
-let moonBg = document.querySelector('.moon-bg');
-
-let footerMain = document.querySelector('.footer-main');
-
-if(fullPage) {
-  setInert();
-  anchors[0].inert = false;
-
-  anchors.forEach((item, i) => {
-    anchorsPos[item.dataset.anchor] = i;
-    anchorsPosArr[i] = item.dataset.anchor;
-  });
-
-  window.addEventListener('resize', func);
-}
-
 export function scroll() {
+  function resizeVal () {
+    sectionHash();
+  };
+  let func = throttle(resizeVal, 800);
+
+  const fullPage = document.querySelector('.full-page');
+
+  let anchors = document.querySelectorAll('[data-anchor]');
+  let anchorsPos = {};
+  let anchorsPosArr = [];
+
+  let pagination = document.querySelectorAll('.pagination__link');
+
+  let moonBg = document.querySelector('.moon-bg');
+
+  let footerMain = document.querySelector('.footer-main');
+
+  if(fullPage) {
+    setInert();
+    anchors[0].inert = false;
+
+    anchors.forEach((item, i) => {
+      anchorsPos[item.dataset.anchor] = i;
+      anchorsPosArr[i] = item.dataset.anchor;
+    });
+
+    window.addEventListener('resize', func);
+  }
+
   if(fullPage) {
     window.addEventListener('wheel', pageScroll);
 
@@ -83,47 +83,53 @@ export function scroll() {
       sectionHash();
     });
   }
-}
 
-export function sectionHash() {
-  if(fullPage) {
-    let anchor = anchorsPos[location.hash.slice(1)];
+  function sectionHash() {
+    if(fullPage) {
+      let anchor = anchorsPos[location.hash.slice(1)];
 
-    if(anchor || anchor === 0) {
-      fullPage.style.transform = `translateY(-${anchor * document.body.offsetHeight}px)`;
-      setInert();
-      anchors.forEach(item => {
-        if(item.dataset.anchor == location.hash.slice(1)) {
-          item.inert = false;
+      if(anchor || anchor === 0) {
+        fullPage.style.transform = `translateY(-${anchor * document.body.offsetHeight}px)`;
+        setInert();
+        anchors.forEach(item => {
+          if(item.dataset.anchor == location.hash.slice(1)) {
+            item.inert = false;
+          }
+        });
+        if(anchor === 3) {
+          footerMain.inert = false;
         }
-      });
 
-      paginationReset();
-      pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
+        paginationReset();
+        pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
 
-      if(anchor == 2 || anchor == 3) {
-        moonBg.classList.add('moon-bg--hidden');
-      } else {
-        moonBg.classList.remove('moon-bg--hidden');
-      }
+        if(anchor == 2 || anchor == 3) {
+          moonBg.classList.add('moon-bg--hidden');
+        } else {
+          moonBg.classList.remove('moon-bg--hidden');
+        }
 
-      if(anchor == 3) {
-        footerMain.classList.add('footer-main--active');
-      } else {
-        footerMain.classList.remove('footer-main--active');
+        if(anchor == 3) {
+          footerMain.classList.add('footer-main--active');
+        } else {
+          footerMain.classList.remove('footer-main--active');
+        }
       }
     }
   }
-}
 
-function paginationReset() {
-  pagination.forEach(item => {
-    item.classList.remove('pagination__link--active');
-  });
-}
+  sectionHash();
 
-function setInert() {
-  anchors.forEach(item => {
-    item.inert = true;
-  });
+  function paginationReset() {
+    pagination.forEach(item => {
+      item.classList.remove('pagination__link--active');
+    });
+  }
+
+  function setInert() {
+    anchors.forEach(item => {
+      item.inert = true;
+    });
+    footerMain.inert = true;
+  }
 }
