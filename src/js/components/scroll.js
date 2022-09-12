@@ -91,7 +91,7 @@ export function scroll() {
       let anchor = anchorsPos[location.hash.slice(1)];
 
       if(anchor || anchor === 0) {
-        fullPage.style.transform = `translateY(-${anchor * document.body.offsetHeight}px)`;
+        fullPage.style.transform = `translate3d(0, -${anchor * document.body.offsetHeight}px, 0)`;
         setInert();
         anchors.forEach(item => {
           if(item.dataset.anchor == location.hash.slice(1)) {
