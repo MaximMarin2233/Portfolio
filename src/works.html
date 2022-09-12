@@ -13,13 +13,17 @@
       @include('partials/about-work.html')
 
       <div class="container sticky-arrow">
-        <button class="btn-reset sticky-arrow__btn" aria-label="Вернуться назад">
+        <a class="sticky-arrow__link" href="/#works" aria-label="Вернуться назад">
           <span></span>
-        </button>
+        </a>
       </div>
     </main>
 
-    @include('partials/footer.html')
+    <footer class="footer">
+      <div class="container footer__content">
+        <a class="arrow-up" href="/#works" aria-label="Вернуться назад">Наверх</a>
+      </div>
+    </footer>
     @include('partials/page-loading.html')
     <!-- @include('html/h1.html') пример include -->
   </div>
