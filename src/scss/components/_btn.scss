@@ -7,4 +7,7 @@
   font-size: 22px;
   color: var(--light-color);
   background-color: var(--main-color);
+  transition:
+    color 0.5s ease-in-out,
+    background-color 0.5s ease-in-out;
 }

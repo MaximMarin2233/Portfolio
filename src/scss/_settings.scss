@@ -212,7 +212,7 @@ svg {
   display: block;
   width: 35px;
   height: 35px;
-  color: var(--light-color);
+  color: var(--header-color);
   filter: drop-shadow(3px 3px 10px var(--dark-color));
 }
 
@@ -260,6 +260,14 @@ svg {
       transform 0.7s calc(var(--delay) * 1),
       opacity 0.4s calc(var(--delay) * 1);
   }
+
+  .anim.btn {
+    transition:
+      transform 0.7s calc(var(--delay) * 1),
+      opacity 0.4s calc(var(--delay) * 1),
+      color 0.5s ease-in-out,
+      background-color 0.5s ease-in-out;
+  }
 }
 
 [data-text] {
@@ -273,4 +281,8 @@ svg {
   z-index: -1;
   overflow: visible;
   transform: translateY(-50%);
+}
+
+.header-color {
+  --header-color: #ff4d5a;
 }
