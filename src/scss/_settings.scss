@@ -143,6 +143,7 @@ svg {
   font-size: 90px;
   line-height: 110px;
   letter-spacing: 0.1em;
+  text-shadow: 0 10px 30px rgba(0 0 0 / 70%);
 
   &::after {
     content: "";
@@ -212,8 +213,8 @@ svg {
   display: block;
   width: 35px;
   height: 35px;
-  color: var(--header-color);
-  filter: drop-shadow(3px 3px 10px var(--dark-color));
+  color: rgba(var(--header-color) / 100%);
+  filter: drop-shadow(3px 3px 10px rgba(0 0 0 / 70%));
 }
 
 .title.anim {
@@ -284,5 +285,5 @@ svg {
 }
 
 .header-color {
-  --header-color: #ff4d5a;
+  --header-color: 255 77 90;
 }

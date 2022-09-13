@@ -1,11 +1,11 @@
-export function otherPages() {
-  const fullPage = document.querySelector('.full-page');
+import vars from '../_vars';
 
+export function otherPages() {
   const sectionWorks = document.querySelector('.works');
   const sectionAbout = document.querySelector('.about');
 
-  if(!fullPage) {
-    document.documentElement.style.overflow = 'visible';
+  if(!vars.fullPage) {
+    vars.htmlEl.style.overflow = 'visible';
 
     if(sectionWorks) {
       setColor(sectionWorks);
@@ -18,9 +18,9 @@ export function otherPages() {
     if(el) {
       window.addEventListener('scroll', () => {
         if(window.scrollY >= el.offsetHeight) {
-          document.documentElement.classList.add('header-color');
+          vars.htmlEl.classList.add('header-color');
         } else {
-          document.documentElement.classList.remove('header-color');
+          vars.htmlEl.classList.remove('header-color');
         }
       });
     }

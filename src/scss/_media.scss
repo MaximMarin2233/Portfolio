@@ -1,7 +1,7 @@
 @media (hover: hover) and (pointer: fine) {
   .icon {
     &:hover {
-      color: rgb(255 255 255 / 60%);
+      color: rgba(var(--header-color) / 60%);
       transition-delay: 1s;
       animation: tada 1s;
     }
@@ -25,7 +25,7 @@
     }
 
     &:hover {
-      color: rgb(255 255 255 / 60%);
+      color: rgba(var(--header-color) / 60%);
       transition-delay: 1s;
       animation: rubberBand 1s;
     }
@@ -34,14 +34,14 @@
   .header {
     &__main {
       &:hover {
-        color: rgb(255 255 255 / 60%);
+        color: rgba(var(--header-color) / 60%);
       }
     }
   }
 
   .sticky-arrow__link {
     &:hover {
-      color: rgb(255 255 255 / 60%);
+      color: rgba(var(--header-color) / 60%);
       transform: translateX(-5px);
       transition-delay: 600ms;
 

@@ -14,5 +14,5 @@ export const enableScroll = () => {
     left: 0
   });
   vars.bodyEl.removeAttribute('data-position');
-  vars.htmlEl.style.scrollBehavior = 'smooth';
+  // vars.htmlEl.style.scrollBehavior = 'smooth';
 }

@@ -1,3 +1,5 @@
+import vars from './_vars';
+
 import './components/burger';
 import './components/tooltip';
 import './components/skillBar';
@@ -25,7 +27,7 @@ window.addEventListener('load', () => {
     scrollAnim();
   }, 700);
   setTimeout(() => {
-    document.querySelector('.page-loading').remove();
+    vars.pageLoader.remove();
   }, 2000);
 });
 

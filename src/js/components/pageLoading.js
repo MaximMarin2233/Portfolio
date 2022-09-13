@@ -1,4 +1,5 @@
+import vars from '../_vars';
+
 export function pageLoading() {
-  const pageLoader = document.querySelector('.page-loading');
-  pageLoader.classList.add('page-loading--hidden');
+  vars.pageLoader.classList.add('page-loading--hidden');
 }

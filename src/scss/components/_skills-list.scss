@@ -58,6 +58,7 @@
 
   &__bar {
     position: relative;
+    overflow: hidden;
     border-radius: 15px;
     height: 15px;
     background-color: var(--light-color);
@@ -71,5 +72,11 @@
     width: 80%;
     height: 100%;
     background-image: linear-gradient(90deg, #072142 0%, #ff4d5a 100%);
+    transform: translateX(-100%);
+    transition: transform 3s ease-in-out;
+
+    &--active {
+      transform: translateX(0);
+    }
   }
 }

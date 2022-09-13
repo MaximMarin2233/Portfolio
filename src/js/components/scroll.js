@@ -1,26 +1,25 @@
+import vars from '../_vars';
 import { throttle } from '../functions/throttle';
 
 export function scroll() {
   function resizeVal () {
     sectionHash();
   };
-  let func = throttle(resizeVal, 800);
+  let resizeFunc = throttle(resizeVal, 800);
 
-  const fullPage = document.querySelector('.full-page');
+  const anchors = document.querySelectorAll('[data-anchor]');
+  const anchorsPos = {};
+  const anchorsPosArr = [];
 
-  let anchors = document.querySelectorAll('[data-anchor]');
-  let anchorsPos = {};
-  let anchorsPosArr = [];
+  const pagination = document.querySelectorAll('.pagination__link');
 
-  let pagination = document.querySelectorAll('.pagination__link');
+  const moonBg = document.querySelector('.moon-bg-wrapper');
 
-  let moonBg = document.querySelector('.moon-bg-wrapper');
+  const footerMain = document.querySelector('.footer-main');
 
-  let footerMain = document.querySelector('.footer-main');
+  const aboutAnim = document.querySelector('.about__illustration');
 
-  let aboutAnim = document.querySelector('.about__illustration');
-
-  if(fullPage) {
+  if(vars.fullPage) {
     setInert();
     anchors[0].inert = false;
 
@@ -29,69 +28,66 @@ export function scroll() {
       anchorsPosArr[i] = item.dataset.anchor;
     });
 
-    window.addEventListener('resize', func);
-  }
+    window.addEventListener('resize', resizeFunc);
 
-  if(fullPage) {
     window.addEventListener('wheel', pageScroll);
-
-    let lastStage = anchorsPos[location.hash.slice(1)] || 0;
-
-    function pageScroll(e) {
-      // window.removeEventListener('wheel', pageScroll);
-      // setTimeout(() => {
-      //   window.addEventListener('wheel', pageScroll);
-      // }, 500);
-
-      if(!e.ctrlKey) {
-        if(e.deltaY < 0) {
-          if(location.hash) {
-            let stage = anchorsPos[location.hash.slice(1)] - 1;
-            if(stage >= 0) {
-              location.hash = anchorsPosArr[stage];
-              lastStage = stage;
-            } else {
-              console.log(lastStage);
-              if(lastStage - 1 >= 0) {
-                location.hash = anchorsPosArr[lastStage - 1];
-              }
-            }
-
-            return;
-          }
-
-        } else if(e.deltaY > 0) {
-          if(location.hash) {
-            let stage = anchorsPos[location.hash.slice(1)] + 1;
-            if(stage < 4) {
-              location.hash = anchorsPosArr[stage];
-              lastStage = stage;
-            } else {
-              console.log(lastStage);
-              if(lastStage + 1 < 4) {
-                location.hash = anchorsPosArr[lastStage + 1];
-              }
-            }
-
-            return;
-          }
-          location.hash = anchorsPosArr[1];
-        }
-      }
-
-    }
 
     window.addEventListener("hashchange", () => {
       sectionHash();
     });
   }
 
+  let lastStage = anchorsPos[location.hash.slice(1)] || 0;
+
+  function pageScroll(e) {
+    // window.removeEventListener('wheel', pageScroll);
+    // setTimeout(() => {
+    //   window.addEventListener('wheel', pageScroll);
+    // }, 500);
+
+    if(!e.ctrlKey) {
+      if(e.deltaY < 0) {
+        if(location.hash) {
+          let stage = anchorsPos[location.hash.slice(1)] - 1;
+          if(stage >= 0) {
+            location.hash = anchorsPosArr[stage];
+            lastStage = stage;
+          } else {
+            console.log(lastStage);
+            if(lastStage - 1 >= 0) {
+              location.hash = anchorsPosArr[lastStage - 1];
+            }
+          }
+
+          return;
+        }
+
+      } else if(e.deltaY > 0) {
+        if(location.hash) {
+          let stage = anchorsPos[location.hash.slice(1)] + 1;
+          if(stage < 4) {
+            location.hash = anchorsPosArr[stage];
+            lastStage = stage;
+          } else {
+            console.log(lastStage);
+            if(lastStage + 1 < 4) {
+              location.hash = anchorsPosArr[lastStage + 1];
+            }
+          }
+
+          return;
+        }
+        location.hash = anchorsPosArr[1];
+      }
+    }
+  }
+
   function sectionHash() {
-    if(fullPage) {
+    if(vars.fullPage) {
       let anchor = anchorsPos[location.hash.slice(1)];
 
       if(anchor || anchor === 0) {
-        fullPage.style.transform = `translate3d(0, -${anchor * document.body.offsetHeight}px, 0)`;
+        vars.fullPage.style.transform = `translate3d(0, -${anchor * document.body.offsetHeight}px, 0)`;
         setInert();
         anchors.forEach(item => {
           if(item.dataset.anchor == location.hash.slice(1)) {

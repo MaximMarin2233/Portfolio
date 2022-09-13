@@ -69,7 +69,7 @@
   }
 
   50% {
-    transform: translateY(-5%);
+    transform: translateY(-15%);
   }
 
   70% {
@@ -77,17 +77,17 @@
   }
 
   to {
-    transform: translateY(-29%);
+    transform: translateY(-35%);
   }
 }
 
 @keyframes aboutIllistrationDown {
   from {
-    transform: translateY(-29%);
+    transform: translateY(-35%);
   }
 
   to {
-    transform: translateY(-15%);
+    transform: translateY(-25%);
   }
 }
 

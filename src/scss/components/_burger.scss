@@ -8,9 +8,9 @@
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: var(--header-color);
+  color: rgba(var(--header-color) / 100%);
   background-color: transparent;
-  filter: drop-shadow(3px 3px 10px var(--dark-color));
+  filter: drop-shadow(3px 3px 10px rgba(0 0 0 / 70%));
   transition: color 0.5s ease-in-out;
   cursor: pointer;
 

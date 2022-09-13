@@ -1,7 +1,7 @@
-export function scrollAnim() {
-  const fullPage = document.querySelector('.full-page');
+import vars from '../_vars';
 
-  if(fullPage) {
+export function scrollAnim() {
+  if(vars.fullPage) {
     function onEntry(entry) {
       entry.forEach(change => {
         if (change.isIntersecting) {
