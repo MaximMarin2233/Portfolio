@@ -35,30 +35,21 @@
     }
   }
 
-  &__img {
-    position: absolute;
+  &__moon {
+    border-radius: 100%;
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient(180deg, #fff 0%, #81b3dd 100%);
+  }
 
-    &--moon-wrapper {
-      width: 600px;
-      height: 600px;
-    }
+  &__moon-content {
+    width: 300px;
+    height: 486px;
+  }
 
-    &--moon {
-      border-radius: 100%;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(180deg, #fff 0%, #81b3dd 100%);
-    }
-
-    &--moon-content {
-      width: 300px;
-      height: 486px;
-    }
-
-    &--cloud {
-      width: 440px;
-      height: 267px;
-    }
+  &__cloud {
+    width: 440px;
+    height: 267px;
   }
 
   &__subtitle {
