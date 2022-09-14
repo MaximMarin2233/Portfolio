@@ -101,3 +101,139 @@
     }
   }
 }
+
+@media (max-width: 1399.98px) {
+  .section-default {
+    padding-left: 100px;
+  }
+
+  .home {
+    &__moon {
+      width: 530px;
+      height: 530px;
+    }
+
+    &__moon-content {
+      width: 260px;
+      height: 421px;
+    }
+
+    &__cloud {
+      width: 400px;
+      height: 243px;
+    }
+  }
+
+  .moon-bg {
+    width: 500px;
+    height: 500px;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  .title-absolute__text {
+    font-size: 58px;
+
+    &--number {
+      font-size: 70px;
+    }
+  }
+
+  .descr {
+    font-size: 23px;
+  }
+
+  .works {
+    &__illustration {
+      right: 6%;
+      width: 590px;
+      height: 241px;
+    }
+  }
+
+  .about {
+    &__illustration {
+      width: 160px;
+      height: 717px;
+    }
+
+    &__img {
+      &--spiderman-body {
+        top: -72px;
+      }
+
+      &--mask {
+        bottom: 128px;
+        width: 141px;
+        height: 54px;
+      }
+
+      &--eye-1,
+      &--eye-2 {
+        width: 58px;
+        height: 61px;
+      }
+
+      &--eye-closed-1,
+      &--eye-closed-2 {
+        width: 55px;
+        height: 21px;
+      }
+
+      &--mouth {
+        bottom: 156px;
+      }
+
+      &--mouth-open {
+        bottom: 148px;
+      }
+
+      &--lang-wrapper {
+        bottom: 165px;
+      }
+
+      &--message {
+        span {
+          font-size: 20px;
+        }
+      }
+
+      &--emotion {
+        bottom: -30px;
+
+        &::before,
+        span,
+        &::after {
+          border-width: 0 10px 25px;
+        }
+      }
+
+      &--sleep-wrapper {
+        left: -25px;
+        bottom: -30px;
+        width: 40px;
+        height: 55px;
+      }
+
+      &--sleep-1,
+      &--sleep-2 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .contacts {
+    &__illustration-content {
+      width: 510px;
+      height: 510px;
+    }
+  }
+
+  .footer {
+    &-main__up {
+      font-size: 45px;
+    }
+  }
+}

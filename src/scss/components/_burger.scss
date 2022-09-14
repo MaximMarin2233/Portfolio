@@ -44,6 +44,7 @@
 
   &-menu {
     @include flex-all-center;
+    @include bg-cover;
 
     position: fixed;
     z-index: 98;

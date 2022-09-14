@@ -11,6 +11,14 @@ export function otherPages() {
       setColor(sectionWorks);
     } else if(sectionAbout) {
       setColor(sectionAbout);
+
+      const tooltipTxt = document.querySelector('.tooltip__txt');
+      const tooltipBtn = document.querySelector('.tooltip__btn');
+      if(vars.htmlEl.classList.contains('page--android') || vars.htmlEl.classList.contains('page--ios')) {
+        tooltipBtn.addEventListener('click', (e) => {
+          tooltipTxt.classList.toggle('tooltip__txt--mobile-active');
+        });
+      }
     }
   }
 

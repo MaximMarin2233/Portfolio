@@ -36,6 +36,8 @@
   }
 
   &__moon {
+    @include bg-cover;
+
     border-radius: 100%;
     width: 600px;
     height: 600px;
