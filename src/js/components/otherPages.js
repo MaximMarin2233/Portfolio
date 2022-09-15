@@ -19,6 +19,10 @@ export function otherPages() {
           tooltipTxt.classList.toggle('tooltip__txt--mobile-active');
         });
       }
+
+      setTimeout(() => {
+        document.querySelector('.about__illustration').style.transform = 'translateY(-40%)';
+      }, 500);
     }
   }
 

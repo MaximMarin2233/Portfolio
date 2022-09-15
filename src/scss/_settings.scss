@@ -139,11 +139,12 @@ svg {
 .title {
   position: relative;
   margin: 0;
+  margin-bottom: 50px;
   font-weight: 500;
   font-size: 90px;
   line-height: 110px;
   letter-spacing: 0.1em;
-  text-shadow: 0 10px 30px rgba(0 0 0 / 70%);
+  text-shadow: 0 10px 6px rgba(0 0 0 / 40%);
 
   &::after {
     content: "";

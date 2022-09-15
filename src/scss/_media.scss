@@ -232,8 +232,175 @@
   }
 
   .footer {
+    padding: 100px 0;
+
     &-main__up {
       font-size: 45px;
     }
+  }
+
+  .about-work {
+    &__mockup {
+      padding: 50px 0;
+    }
+
+    &__demo {
+      padding: 50px 0;
+    }
+
+    &__mockup-img {
+      width: 900px;
+    }
+
+    &__img {
+      width: 550px;
+    }
+  }
+
+  .work-info {
+    &__title {
+      font-size: 35px;
+    }
+
+    &__descr {
+      font-size: 20px;
+    }
+  }
+
+  .about-info {
+    padding: 20px 0 0;
+
+    &__img {
+      width: 450px;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .title {
+    margin-bottom: 30px;
+    font-size: 70px;
+
+    &::after {
+      bottom: -15px;
+    }
+  }
+
+  .descr {
+    font-size: 21px;
+  }
+
+  .home {
+    &__moon {
+      width: 480px;
+      height: 480px;
+    }
+
+    &__moon-content {
+      width: 235px;
+      height: 380px;
+    }
+
+    &__cloud {
+      width: 360px;
+      height: 218px;
+    }
+  }
+
+  .moon-bg {
+    width: 440px;
+    height: 440px;
+  }
+
+  .works__descr,
+  .about__descr,
+  .contacts__descr {
+    margin-bottom: 15px;
+  }
+
+  .title-absolute__text {
+    font-size: 50px;
+
+    &--number {
+      font-size: 65px;
+    }
+  }
+
+  .works__illustration {
+    right: 4%;
+    width: 550px;
+    height: 223px;
+  }
+
+  .contacts__illustration-content {
+    width: 460px;
+    height: 460px;
+  }
+
+  .about-work {
+    &__mockup-img {
+      width: 750px;
+    }
+
+    &__img {
+      width: 460px;
+    }
+  }
+
+  .work-info {
+    padding: 30px 120px;
+
+    &__counter {
+      top: 30px;
+
+      &::before {
+        margin-right: 12px;
+        width: 50px;
+      }
+
+      &::after {
+        font-size: 35px;
+        line-height: 35px;
+      }
+    }
+
+    &__text {
+      &:not(:last-child) {
+        margin-right: 70px;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__descr {
+      font-size: 18px;
+    }
+  }
+
+  .about-info {
+    &__text {
+      text-align: right;
+    }
+  }
+
+  .skills-list {
+    &__card {
+      --margin: 50px;
+      --elements: 2;
+
+      &:not(:nth-child(3n)) {
+        margin-right: initial;
+      }
+
+      &:not(:nth-child(2n)) {
+        margin-right: var(--margin);
+      }
+    }
+  }
+
+  .burger-menu__link {
+    font-size: 50px;
   }
 }
