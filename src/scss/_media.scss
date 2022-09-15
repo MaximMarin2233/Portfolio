@@ -359,8 +359,8 @@
       }
 
       &::after {
-        font-size: 35px;
-        line-height: 35px;
+        font-size: 32px;
+        line-height: 32px;
       }
     }
 
@@ -402,5 +402,142 @@
 
   .burger-menu__link {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section-default {
+    padding-left: 90px;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 80px;
+  }
+
+  .descr {
+    font-size: 18px;
+  }
+
+  .home {
+    &__moon {
+      width: 400px;
+      height: 400px;
+    }
+
+    &__moon-content {
+      width: 200px;
+      height: 323px;
+    }
+
+    &__cloud {
+      width: 310px;
+      height: 188px;
+    }
+  }
+
+  .moon-bg {
+    width: 360px;
+    height: 360px;
+  }
+
+  .illustration {
+    right: 5%;
+  }
+
+  .title-absolute__text {
+    font-size: 40px;
+
+    &--number {
+      font-size: 55px;
+    }
+  }
+
+  .works__illustration {
+    right: 3%;
+    width: 450px;
+    height: 184px;
+  }
+
+  .btn {
+    font-size: 20px;
+  }
+
+  .contacts__illustration-content {
+    width: 380px;
+    height: 380px;
+  }
+
+  .footer-main__up {
+    font-size: 35px;
+  }
+
+  .work-info {
+    padding: 30px 90px;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__counter {
+      &::before {
+        margin-right: 10px;
+        width: 30px;
+      }
+
+      &::after {
+        font-size: 28px;
+        line-height: 28px;
+      }
+    }
+
+    &__descr {
+      font-size: 16px;
+    }
+  }
+
+  .about-work {
+    &__mockup-img {
+      width: 630px;
+    }
+
+    &__img {
+      width: 350px;
+    }
+  }
+
+  .arrow-up {
+    font-size: 32px;
+  }
+
+  .about-info {
+    &__img {
+      width: 400px;
+    }
+  }
+
+  .skills-list {
+    &__img {
+      width: 45px;
+    }
+
+    &__title {
+      font-size: 21px;
+    }
+  }
+
+  .tooltip {
+    &__btn {
+      width: 23px;
+      height: 23px;
+
+      svg {
+        width: 5px;
+      }
+    }
+
+    &__content {
+      font-size: 20px;
+    }
   }
 }
