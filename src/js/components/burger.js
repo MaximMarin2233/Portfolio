@@ -7,6 +7,7 @@ export function burger() {
   const menu = document?.querySelector('[data-menu]');
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const menuItemsInside = document?.querySelectorAll('.burger-menu__link-inside');
+  const social = document?.querySelector('.burger-menu__social');
 
   burger?.addEventListener('click', burgerClick);
 
@@ -19,6 +20,7 @@ export function burger() {
   function burgerClick(e) {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('burger-menu--active');
+    social?.classList.toggle('burger-menu__social--active');
 
     let i = 0;
 

@@ -9,8 +9,11 @@ export function otherPages() {
 
     if(sectionWorks) {
       setColor(sectionWorks);
+      sectionWorks.querySelector('.works-detail__content').style.height = `${vars.htmlEl.clientHeight}px`;
     } else if(sectionAbout) {
       setColor(sectionAbout);
+      sectionAbout.querySelector('.about-me__content').style.height = `${vars.htmlEl.clientHeight}px`;
+
 
       const tooltipTxt = document.querySelector('.tooltip__txt');
       const tooltipBtn = document.querySelector('.tooltip__btn');
@@ -20,9 +23,15 @@ export function otherPages() {
         });
       }
 
-      setTimeout(() => {
-        document.querySelector('.about__illustration').style.transform = 'translateY(-40%)';
-      }, 500);
+      if(vars.htmlEl.offsetWidth < 575.98) {
+        setTimeout(() => {
+          document.querySelector('.about__illustration').style.transform = 'translateY(-40%) translateX(50%)';
+        }, 500);
+      } else if (vars.htmlEl.offsetWidth >= 575.98) {
+        setTimeout(() => {
+          document.querySelector('.about__illustration').style.transform = 'translateY(-40%)';
+        }, 500);
+      }
     }
   }
 

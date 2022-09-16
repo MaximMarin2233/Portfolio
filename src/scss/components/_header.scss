@@ -5,6 +5,7 @@
   top: 0;
   z-index: 99;
   padding: 35px 0;
+  min-width: 320px;
 
   &__content {
     @include flex-all-sb;

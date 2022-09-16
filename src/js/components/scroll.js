@@ -86,6 +86,11 @@ export function scroll() {
     if(vars.fullPage) {
       let anchor = anchorsPos[location.hash.slice(1)];
 
+      document.querySelector('.container--full-height').style.height = `${vars.htmlEl.clientHeight}px`;
+      anchors.forEach(item => {
+        item.style.height = `${vars.htmlEl.clientHeight}px`;
+      });
+
       if(anchor || anchor === 0) {
         vars.fullPage.style.transform = `translate3d(0, -${anchor * document.body.offsetHeight}px, 0)`;
         setInert();

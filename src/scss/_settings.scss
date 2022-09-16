@@ -101,10 +101,6 @@ svg {
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
 
-  &--full-height {
-    height: 100vh;
-  }
-
   &--smaller {
     max-width: calc(1454px + var(--container-offset));
   }
@@ -207,7 +203,8 @@ svg {
   position: relative;
   align-items: center;
   padding-left: 170px;
-  height: 100vh;
+
+  // height: 100vh;
 }
 
 .icon {

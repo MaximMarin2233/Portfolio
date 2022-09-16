@@ -240,20 +240,17 @@
   }
 
   .about-work {
-    &__mockup {
-      padding: 50px 0;
-    }
-
-    &__demo {
-      padding: 50px 0;
-    }
-
     &__mockup-img {
       width: 900px;
     }
 
     &__img {
       width: 550px;
+    }
+
+    &__mockup,
+    &__demo {
+      padding: 50px 0;
     }
   }
 
@@ -406,6 +403,10 @@
 }
 
 @media (max-width: 991.98px) {
+  .stars-wrapper {
+    width: 900px;
+  }
+
   .section-default {
     padding-left: 90px;
   }
@@ -523,16 +524,17 @@
 
     &__title {
       font-size: 21px;
+      line-height: 21px;
     }
   }
 
   .tooltip {
-    &__btn {
-      width: 23px;
-      height: 23px;
+    width: 23px;
+    height: 23px;
 
+    &__btn {
       svg {
-        width: 5px;
+        width: 3px;
       }
     }
 
@@ -627,7 +629,8 @@
     height: 163px;
   }
 
-  .works-detail__content {
+  .works-detail__content,
+  .about-me__content {
     padding-left: 80px;
   }
 
@@ -677,10 +680,6 @@
     }
   }
 
-  .about-me__content {
-    padding-left: 80px;
-  }
-
   .about-info {
     &__img {
       width: 350px;
@@ -699,6 +698,7 @@
 
     &__title {
       font-size: 18px;
+      line-height: 18px;
     }
 
     &__value {
@@ -743,6 +743,17 @@
       &__social {
         display: flex;
         margin-right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.5s ease-in-out,
+          visibility 0.5s ease-in-out;
+
+        &--active {
+          opacity: 1;
+          visibility: visible;
+          transition-delay: 1.2s;
+        }
       }
     }
   }
@@ -783,10 +794,16 @@
   }
 
   .moon-bg-wrapper,
-  .illustration {
+  .illustration,
+  .stars-wrapper {
     right: 50%;
     top: 100px;
     transform: translateX(50%);
+  }
+
+  .stars-wrapper {
+    top: 50px;
+    width: 600px;
   }
 
   .moon-bg-wrapper--hidden {
@@ -835,5 +852,251 @@
 
   .btn {
     font-size: 15px;
+  }
+
+  .about {
+    &__illustration {
+      right: 50%;
+      top: -80px;
+      width: 110px;
+      height: 493px;
+      transform: translateY(-100%) translateX(50%);
+    }
+
+    &__img {
+      &--spiderman-body {
+        top: -4px;
+        width: 80px;
+      }
+
+      &--spiderman-head {
+        bottom: -36px;
+      }
+
+      &--mask {
+        bottom: 45px;
+        width: 97px;
+        height: 37px;
+      }
+
+      &--eye-1 {
+        left: 8px;
+      }
+
+      &--eye-2 {
+        right: 8px;
+      }
+
+      &--eye-1,
+      &--eye-2 {
+        bottom: 0;
+        width: 40px;
+        height: 42px;
+      }
+
+      &--eye-closed-1,
+      &--eye-closed-2 {
+        bottom: 15px;
+        width: 35px;
+        height: 14px;
+      }
+
+      &--mouth {
+        bottom: 65px;
+        width: 40px;
+        height: 7px;
+      }
+
+      &--mouth-open {
+        bottom: 60px;
+        width: 14px;
+        height: 14px;
+      }
+
+      &--lang-wrapper {
+        bottom: 71px;
+        width: 13px;
+        height: 20px;
+      }
+
+      &--lang {
+        width: 100%;
+        height: 100%;
+      }
+
+      &--message {
+        left: -40px;
+        bottom: 48px;
+
+        span {
+          padding: 15px;
+          font-size: 13px;
+        }
+      }
+
+      &--emotion {
+        bottom: -70px;
+
+        &::before,
+        span,
+        &::after {
+          border-width: 0 7px 18px;
+        }
+      }
+
+      &--sleep-wrapper {
+        left: -26px;
+        bottom: -75px;
+      }
+    }
+  }
+
+  .arrow-up {
+    padding-left: 60px;
+    font-size: 25px;
+
+    &::before {
+      width: 17px;
+    }
+
+    &::after {
+      width: 50px;
+    }
+  }
+
+  .contacts__illustration-content {
+    width: 230px;
+    height: 230px;
+  }
+
+  .works-detail__content,
+  .about-me__content {
+    padding: 0 15px 150px;
+  }
+
+  .sticky-arrow__link {
+    top: 80px;
+  }
+
+  .work-info {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__text {
+      text-align: center;
+
+      &:not(:last-child) {
+        margin: 0;
+        margin-bottom: 30px;
+      }
+
+      &--not-descr {
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      font-size: 23px;
+
+      &--not-descr {
+        margin-bottom: 0;
+      }
+    }
+
+    &__descr {
+      font-size: 13px;
+      line-height: 30px;
+    }
+  }
+
+  .about-work {
+    &__demo-content {
+      flex-direction: column;
+
+      picture {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+    }
+
+    &__mockup,
+    &__demo {
+      padding: 30px 0;
+    }
+  }
+
+  .about-info {
+    padding: 0;
+
+    &__skills {
+      padding: 0;
+    }
+  }
+
+  .skills-list {
+    &__card {
+      margin-bottom: 50px;
+      width: 100%;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
+    }
+
+    &__title {
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    &__value {
+      font-size: 15px;
+
+      &::after {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .tooltip {
+    width: 17px;
+    height: 17px;
+  }
+
+  @keyframes aboutIllistrationShow {
+    from {
+      transform: translateY(-100%) translateX(50%);
+    }
+
+    50% {
+      transform: translateY(-15%) translateX(50%);
+    }
+
+    70% {
+      transform: translateY(-40%) translateX(50%);
+    }
+
+    to {
+      transform: translateY(-35%) translateX(50%);
+    }
+  }
+
+  @keyframes aboutIllistrationDown {
+    from {
+      transform: translateY(-35%) translateX(50%);
+    }
+
+    to {
+      transform: translateY(-25%) translateX(50%);
+    }
   }
 }
