@@ -1,5 +1,6 @@
 import vars from '../_vars';
 import { throttle } from '../functions/throttle';
+import 'swiped-events';
 
 export function scroll() {
   function resizeVal () {
@@ -35,51 +36,67 @@ export function scroll() {
     window.addEventListener("hashchange", () => {
       sectionHash();
     });
+
+    if(vars.htmlEl.classList.contains('page--android') || vars.htmlEl.classList.contains('page--ios')) {
+      document.addEventListener('swiped', function(e) {
+        if(e.detail.dir == 'up') {
+          scrollDown();
+        } else if(e.detail.dir == 'down') {
+          scrollUp();
+        }
+      });
+    }
   }
 
   let lastStage = anchorsPos[location.hash.slice(1)] || 0;
 
   function pageScroll(e) {
-    // window.removeEventListener('wheel', pageScroll);
-    // setTimeout(() => {
-    //   window.addEventListener('wheel', pageScroll);
-    // }, 500);
+    window.removeEventListener('wheel', pageScroll);
+    setTimeout(() => {
+      window.addEventListener('wheel', pageScroll);
+    }, 700);
 
     if(!e.ctrlKey) {
       if(e.deltaY < 0) {
-        if(location.hash) {
-          let stage = anchorsPos[location.hash.slice(1)] - 1;
-          if(stage >= 0) {
-            location.hash = anchorsPosArr[stage];
-            lastStage = stage;
-          } else {
-            console.log(lastStage);
-            if(lastStage - 1 >= 0) {
-              location.hash = anchorsPosArr[lastStage - 1];
-            }
-          }
-
-          return;
-        }
-
+        scrollUp();
       } else if(e.deltaY > 0) {
-        if(location.hash) {
-          let stage = anchorsPos[location.hash.slice(1)] + 1;
-          if(stage < 4) {
-            location.hash = anchorsPosArr[stage];
-            lastStage = stage;
-          } else {
-            console.log(lastStage);
-            if(lastStage + 1 < 4) {
-              location.hash = anchorsPosArr[lastStage + 1];
-            }
-          }
-
-          return;
-        }
-        location.hash = anchorsPosArr[1];
+        scrollDown();
       }
     }
+  }
+
+  function scrollUp() {
+    if(location.hash) {
+      let stage = anchorsPos[location.hash.slice(1)] - 1;
+      if(stage >= 0) {
+        location.hash = anchorsPosArr[stage];
+        lastStage = stage;
+      } else {
+        console.log(lastStage);
+        if(lastStage - 1 >= 0) {
+          location.hash = anchorsPosArr[lastStage - 1];
+        }
+      }
+
+      return;
+    }
+  }
+  function scrollDown() {
+    if(location.hash) {
+      let stage = anchorsPos[location.hash.slice(1)] + 1;
+      if(stage < 4) {
+        location.hash = anchorsPosArr[stage];
+        lastStage = stage;
+      } else {
+        console.log(lastStage);
+        if(lastStage + 1 < 4) {
+          location.hash = anchorsPosArr[lastStage + 1];
+        }
+      }
+
+      return;
+    }
+    location.hash = anchorsPosArr[1];
   }
 
   function sectionHash() {
