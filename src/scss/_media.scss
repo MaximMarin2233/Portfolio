@@ -534,7 +534,7 @@
 
     &__btn {
       svg {
-        width: 3px;
+        width: 5px;
       }
     }
 
@@ -566,6 +566,7 @@
     left: 50%;
     top: initial;
     bottom: 30px;
+    z-index: 1;
     flex-direction: row;
     width: auto;
     transform: translateX(-50%);
@@ -1070,6 +1071,13 @@
   .tooltip {
     width: 17px;
     height: 17px;
+
+    &__btn {
+      svg {
+        width: 5px;
+        height: 9px;
+      }
+    }
   }
 
   @keyframes aboutIllistrationShow {

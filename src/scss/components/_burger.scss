@@ -129,6 +129,10 @@
     display: none;
   }
 
+  &-menu__icon {
+    color: var(--light-color);
+  }
+
   &--active {
     &::before {
       top: 50%;

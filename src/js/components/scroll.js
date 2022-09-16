@@ -72,7 +72,6 @@ export function scroll() {
         location.hash = anchorsPosArr[stage];
         lastStage = stage;
       } else {
-        console.log(lastStage);
         if(lastStage - 1 >= 0) {
           location.hash = anchorsPosArr[lastStage - 1];
         }
@@ -88,7 +87,6 @@ export function scroll() {
         location.hash = anchorsPosArr[stage];
         lastStage = stage;
       } else {
-        console.log(lastStage);
         if(lastStage + 1 < 4) {
           location.hash = anchorsPosArr[lastStage + 1];
         }
