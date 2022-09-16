@@ -9,11 +9,8 @@ export function otherPages() {
 
     if(sectionWorks) {
       setColor(sectionWorks);
-      sectionWorks.querySelector('.works-detail__content').style.height = `${vars.htmlEl.clientHeight}px`;
     } else if(sectionAbout) {
       setColor(sectionAbout);
-      sectionAbout.querySelector('.about-me__content').style.height = `${vars.htmlEl.clientHeight}px`;
-
 
       const tooltipTxt = document.querySelector('.tooltip__txt');
       const tooltipBtn = document.querySelector('.tooltip__btn');

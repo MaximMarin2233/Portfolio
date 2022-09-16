@@ -23,11 +23,17 @@ html {
   min-width: 320px;
   font-size: 16px;
   color: var(--light-color);
-  background-image: linear-gradient(257.37deg, #173173 0%, rgb(23 49 115 / 1.56%) 99.99%, rgb(37 70 185 / 0%) 100%);
+  background-image: linear-gradient(257.37deg, #173173 0%, rgba(23 49 115 / 1.56%) 99.99%, rgba(37 70 185 / 0%) 100%);
   background-color: var(--dark-color);
 
   &--scroll-off {
     overflow: hidden;
+  }
+
+  &--height-auto {
+    height: initial;
+    background-image: none;
+    background-color: var(--river-color);
   }
 }
 
@@ -189,12 +195,12 @@ svg {
   width: 550px;
   height: 550px;
   box-shadow:
-    0 0 0 400px rgb(237 244 250 / 5%),
-    0 0 0 320px rgb(237 244 250 / 5%),
-    0 0 0 240px rgb(237 244 250 / 5%),
-    0 0 0 160px rgb(237 244 250 / 5%),
-    0 0 0 80px rgb(237 244 250 / 5%);
-  background-color: rgb(237 244 250 / 29%);
+    0 0 0 400px rgba(237 244 250 / 5%),
+    0 0 0 320px rgba(237 244 250 / 5%),
+    0 0 0 240px rgba(237 244 250 / 5%),
+    0 0 0 160px rgba(237 244 250 / 5%),
+    0 0 0 80px rgba(237 244 250 / 5%);
+  background-color: rgba(237 244 250 / 29%);
 }
 
 .section-default {
