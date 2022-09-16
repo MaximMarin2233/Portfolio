@@ -7,7 +7,12 @@
 
 <body class="page__body">
   <div class="site-container">
-    @include('partials/header.html')
+    @include('partials/header.html', {
+      "home": "/",
+      "works": "works.html",
+      "about": "about.html",
+      "contacts": "/#contacts",
+    })
     <main class="main">
       @include('partials/works-detail.html')
       @include('partials/about-work.html')

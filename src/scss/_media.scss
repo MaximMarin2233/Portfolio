@@ -541,3 +541,299 @@
     }
   }
 }
+
+@media (max-width: 767.98px) {
+  .header {
+    padding: 25px 0;
+
+    &__main {
+      font-size: 21px;
+    }
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .burger {
+    --burger-height: 18px;
+  }
+
+  .pagination {
+    left: 50%;
+    top: initial;
+    bottom: 30px;
+    flex-direction: row;
+    width: auto;
+    transform: translateX(-50%);
+
+    &__link {
+      width: 16px;
+      height: 16px;
+
+      &:not(:last-child) {
+        @include mr(35px);
+
+        margin-bottom: initial;
+      }
+
+      &--active {
+        transform: scale(1.8);
+      }
+    }
+  }
+
+  .section-default {
+    padding-left: 0;
+  }
+
+  .home {
+    &__moon {
+      width: 350px;
+      height: 350px;
+    }
+
+    &__moon-content {
+      width: 160px;
+      height: 259px;
+    }
+
+    &__cloud {
+      width: 250px;
+      height: 151px;
+    }
+  }
+
+  .moon-bg {
+    width: 260px;
+    height: 260px;
+  }
+
+  .illustration {
+    right: 0;
+  }
+
+  .title-absolute__text {
+    font-size: 35px;
+
+    &--number {
+      font-size: 45px;
+    }
+  }
+
+  .works__illustration {
+    width: 400px;
+    height: 163px;
+  }
+
+  .works-detail__content {
+    padding-left: 80px;
+  }
+
+  .about__illustration {
+    right: 5%;
+  }
+
+  .contacts__illustration-content {
+    width: 310px;
+    height: 310px;
+  }
+
+  .sticky-arrow__link {
+    width: 50px;
+    height: 35px;
+  }
+
+  .about-work {
+    &__mockup-img {
+      width: 500px;
+    }
+
+    &__img {
+      width: 260px;
+    }
+  }
+
+  .work-info {
+    padding: 65px 0 30px;
+
+    &__counter {
+      top: 15px;
+    }
+
+    &__text {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+  }
+
+  .about-me__content {
+    padding-left: 80px;
+  }
+
+  .about-info {
+    &__img {
+      width: 350px;
+    }
+  }
+
+  .skills-list {
+    &__img {
+      margin-right: 10px;
+      width: 40px;
+    }
+
+    &__card {
+      --margin: 30px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__value {
+      font-size: 18px;
+
+      &::after {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .footer {
+    padding: 50px 0 80px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    &__main {
+      font-size: 19px;
+    }
+  }
+
+  .social {
+    display: none;
+  }
+
+  .burger {
+    --burger-width: 40px;
+
+    &-menu {
+      flex-direction: column;
+
+      &__link {
+        font-size: 30px;
+      }
+
+      &__nav {
+        margin-bottom: 30px;
+      }
+
+      &__social {
+        display: flex;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .title {
+    font-size: 38px;
+    line-height: 60px;
+
+    &::after {
+      height: 3px;
+    }
+  }
+
+  .descr {
+    font-size: 15px;
+  }
+
+  .home {
+    &__moon {
+      width: 280px;
+      height: 280px;
+    }
+
+    &__moon-content {
+      width: 130px;
+      height: 210px;
+    }
+
+    &__cloud {
+      width: 200px;
+      height: 121px;
+
+      &-wrapper--2 {
+        right: 48px;
+        top: -70px;
+      }
+    }
+  }
+
+  .moon-bg-wrapper,
+  .illustration {
+    right: 50%;
+    top: 100px;
+    transform: translateX(50%);
+  }
+
+  .moon-bg-wrapper--hidden {
+    transform: translateX(50%) scale(0);
+  }
+
+  .moon-bg {
+    width: 250px;
+    height: 250px;
+    box-shadow:
+      0 0 0 250px rgb(237 244 250 / 5%),
+      0 0 0 200px rgb(237 244 250 / 5%),
+      0 0 0 150px rgb(237 244 250 / 5%),
+      0 0 0 100px rgb(237 244 250 / 5%),
+      0 0 0 50px rgb(237 244 250 / 5%);
+  }
+
+  .section-default {
+    align-items: flex-end;
+    padding-bottom: 150px;
+  }
+
+  .pagination {
+    &__link {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  .title-absolute {
+    bottom: 35px;
+
+    &__text {
+      font-size: 30px;
+
+      &--number {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .works__illustration {
+    width: 280px;
+    height: 114px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+}

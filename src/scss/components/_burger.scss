@@ -121,6 +121,10 @@
     }
   }
 
+  &-menu__social {
+    display: none;
+  }
+
   &--active {
     &::before {
       top: 50%;

@@ -6,7 +6,12 @@
 })
 
 <body class="page__body page__body--scroll-off">
-  @include('partials/header.html')
+  @include('partials/header.html', {
+    "home": "/",
+    "works": "works.html",
+    "about": "about.html",
+    "contacts": "#contacts",
+  })
   <main class="main">
     <div class="container container--full-height">
       <div class="full-page">

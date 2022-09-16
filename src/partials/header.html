@@ -25,10 +25,10 @@
     </div>
   </div>
   <div class="burger-menu" data-menu>
-    <nav class="nav" title="Главная навигация сайта">
+    <nav class="nav burger-menu__nav" title="Главная навигация сайта">
       <ul class="list-reset nav__list nav__list--column">
         <li class="nav__item burger-menu__item">
-          <a class="nav__link burger-menu__link" href="#home" data-menu-item>
+          <a class="nav__link burger-menu__link" href="@home" data-menu-item>
             <span class="burger-menu__link-inside">
               <span class="burger-menu__link-content">Г</span>
               <span class="burger-menu__link-content">л</span>
@@ -41,7 +41,7 @@
           </a>
         </li>
         <li class="nav__item burger-menu__item">
-          <a class="nav__link burger-menu__link" href="works.html" data-menu-item>
+          <a class="nav__link burger-menu__link" href="@works" data-menu-item>
             <span class="burger-menu__link-inside">
               <span class="burger-menu__link-content">М</span>
               <span class="burger-menu__link-content">о</span>
@@ -56,7 +56,7 @@
           </a>
         </li>
         <li class="nav__item burger-menu__item">
-          <a class="nav__link burger-menu__link" href="about.html" data-menu-item>
+          <a class="nav__link burger-menu__link" href="@about" data-menu-item>
             <span class="burger-menu__link-inside">
               <span class="burger-menu__link-content">П</span>
               <span class="burger-menu__link-content">р</span>
@@ -69,7 +69,7 @@
           </a>
         </li>
         <li class="nav__item burger-menu__item">
-          <a class="nav__link burger-menu__link" href="#contacts" data-menu-item>
+          <a class="nav__link burger-menu__link" href="@contacts" data-menu-item>
             <span class="burger-menu__link-inside">
               <span class="burger-menu__link-content">К</span>
               <span class="burger-menu__link-content">о</span>
@@ -84,5 +84,21 @@
         </li>
       </ul>
     </nav>
+    <ul class="list-reset social burger-menu__social" title="Связаться со мной">
+      <li class="social__item">
+        <a class="icon social__link" href="#" target="_blank" aria-label="Мой аккаунт в Телеграме">
+          <svg>
+            <use xlink:href="img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="icon social__link" href="#" target="_blank" aria-label="Мой аккаунт ВКонтакте">
+          <svg>
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </header>
