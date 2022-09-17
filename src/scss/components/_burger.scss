@@ -62,8 +62,6 @@
 
     &__item {
       @include mb(50px);
-
-      text-align: center;
     }
 
     &__link {
@@ -83,7 +81,7 @@
         bottom: 0;
         width: 50%;
         height: 3px;
-        background-color: var(--light-color);
+        background-color: currentcolor;
         transition: transform 0.3s ease-in-out;
       }
 

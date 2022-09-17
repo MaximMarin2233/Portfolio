@@ -48,6 +48,9 @@
     position: absolute;
     left: 0;
     top: 40px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1;
     color: var(--main-color);
 
     &::before {
@@ -60,16 +63,8 @@
     }
 
     &::after {
-      content: "";
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 40px;
-      color: currentcolor;
-    }
-
-    &:nth-child(-n+9)::after {
       counter-increment: info;
-      content: "0" counter(info);
+      content: counter(info);
     }
   }
 }

@@ -349,15 +349,11 @@
 
     &__counter {
       top: 30px;
+      font-size: 32px;
 
       &::before {
         margin-right: 12px;
         width: 50px;
-      }
-
-      &::after {
-        font-size: 32px;
-        line-height: 32px;
       }
     }
 
@@ -481,14 +477,11 @@
     }
 
     &__counter {
+      font-size: 28px;
+
       &::before {
         margin-right: 10px;
         width: 30px;
-      }
-
-      &::after {
-        font-size: 28px;
-        line-height: 28px;
       }
     }
 
@@ -524,7 +517,6 @@
 
     &__title {
       font-size: 21px;
-      line-height: 21px;
     }
   }
 
@@ -563,13 +555,13 @@
   }
 
   .pagination {
-    left: 50%;
+    @include absoluteLeftCenter;
+
     top: initial;
     bottom: 30px;
     z-index: 1;
     flex-direction: row;
     width: auto;
-    transform: translateX(-50%);
 
     &__link {
       width: 16px;
@@ -699,7 +691,6 @@
 
     &__title {
       font-size: 18px;
-      line-height: 18px;
     }
 
     &__value {
@@ -721,10 +712,10 @@
     &__main {
       font-size: 19px;
     }
-  }
 
-  .social {
-    display: none;
+    &__social {
+      display: none;
+    }
   }
 
   .burger {
@@ -835,7 +826,7 @@
   }
 
   .title-absolute {
-    bottom: 35px;
+    bottom: 60px;
 
     &__text {
       font-size: 30px;
@@ -953,16 +944,10 @@
   }
 
   .arrow-up {
+    --width: 50px;
+
     padding-left: 60px;
     font-size: 25px;
-
-    &::before {
-      width: 17px;
-    }
-
-    &::after {
-      width: 50px;
-    }
   }
 
   .contacts__illustration-content {
@@ -1056,7 +1041,6 @@
 
     &__title {
       font-size: 15px;
-      line-height: 15px;
     }
 
     &__value {
@@ -1078,6 +1062,10 @@
         height: 9px;
       }
     }
+  }
+
+  .footer-main {
+    padding-bottom: 60px;
   }
 
   @keyframes aboutIllistrationShow {

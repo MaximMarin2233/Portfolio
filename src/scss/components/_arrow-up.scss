@@ -1,4 +1,6 @@
 .arrow-up {
+  --width: 70px;
+
   position: relative;
   padding-left: 80px;
   font-weight: 500;
@@ -20,12 +22,12 @@
 
   &::before {
     left: 1px;
-    width: 22.5px;
+    width: calc(var(--width) / 3);
     transform-origin: 0 50%;
   }
 
   &::after {
     left: 0;
-    width: 70px;
+    width: var(--width);
   }
 }

@@ -8,6 +8,7 @@ import './components/scrollAnim';
 import './components/fullpage';
 import './components/pageLoading';
 import './components/otherPages';
+import './components/counter';
 
 
 import { burger } from "./components/burger";
@@ -18,6 +19,7 @@ import { scrollAnim } from "./components/scrollAnim";
 import { fullPage } from "./components/fullpage";
 import { pageLoading } from "./components/pageLoading";
 import { otherPages } from "./components/otherPages";
+import { counter } from "./components/counter";
 
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -38,4 +40,5 @@ window.addEventListener('DOMContentLoaded', () => {
   skillBar();
   parallax();
   otherPages();
+  counter();
 });

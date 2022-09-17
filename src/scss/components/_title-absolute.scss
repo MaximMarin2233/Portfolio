@@ -10,28 +10,19 @@
     margin: 0;
     font-weight: 700;
     font-size: 70px;
-    line-height: 70px;
+    line-height: 1;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--main-color);
 
     &--number {
       font-size: 100px;
-      line-height: 100px;
+      line-height: 1;
       color: var(--light-color);
 
-      &:nth-child(-n + 9) {
-        &::before {
-          counter-increment: pagination;
-          content: "0" counter(pagination);
-        }
-      }
-
-      &:nth-child(n + 10) {
-        &::before {
-          counter-increment: pagination;
-          content: counter(pagination);
-        }
+      &::after {
+        counter-increment: pagination;
+        content: counter(pagination);
       }
     }
   }
