@@ -43,7 +43,7 @@
     &:hover {
       color: rgba(var(--header-color) / 60%);
       transform: translateX(-5px);
-      transition-delay: 600ms;
+      transition-delay: 0.6s;
 
       &::before {
         transform: translateY(-50%) rotate(45deg);
@@ -134,11 +134,7 @@
   }
 
   .title-absolute__text {
-    font-size: 58px;
-
-    &--number {
-      font-size: 70px;
-    }
+    --font-size: 58px;
   }
 
   .descr {
@@ -316,11 +312,7 @@
   }
 
   .title-absolute__text {
-    font-size: 50px;
-
-    &--number {
-      font-size: 65px;
-    }
+    --font-size: 50px;
   }
 
   .works__illustration {
@@ -409,7 +401,6 @@
 
   .title {
     font-size: 50px;
-    line-height: 80px;
   }
 
   .descr {
@@ -443,11 +434,7 @@
   }
 
   .title-absolute__text {
-    font-size: 40px;
-
-    &--number {
-      font-size: 55px;
-    }
+    --font-size: 40px;
   }
 
   .works__illustration {
@@ -568,8 +555,7 @@
       height: 16px;
 
       &:not(:last-child) {
-        @include mr(35px);
-
+        margin-right: 35px;
         margin-bottom: initial;
       }
 
@@ -610,11 +596,7 @@
   }
 
   .title-absolute__text {
-    font-size: 35px;
-
-    &--number {
-      font-size: 45px;
-    }
+    --font-size: 35px;
   }
 
   .works__illustration {
@@ -694,11 +676,7 @@
     }
 
     &__value {
-      font-size: 18px;
-
-      &::after {
-        font-size: 14px;
-      }
+      --font-size: 18px;
     }
   }
 
@@ -752,7 +730,6 @@
 
   .title {
     font-size: 38px;
-    line-height: 60px;
 
     &::after {
       height: 3px;
@@ -829,11 +806,7 @@
     bottom: 60px;
 
     &__text {
-      font-size: 30px;
-
-      &--number {
-        font-size: 35px;
-      }
+      --font-size: 30px;
     }
   }
 
@@ -995,7 +968,6 @@
 
     &__descr {
       font-size: 13px;
-      line-height: 30px;
     }
   }
 
@@ -1011,7 +983,6 @@
     }
 
     &__img {
-      display: block;
       width: 100%;
     }
 
@@ -1044,11 +1015,7 @@
     }
 
     &__value {
-      font-size: 15px;
-
-      &::after {
-        font-size: 12px;
-      }
+      --font-size: 15px;
     }
   }
 

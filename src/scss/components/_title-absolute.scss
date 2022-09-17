@@ -7,16 +7,18 @@
   pointer-events: none;
 
   &__text {
+    --font-size: 70px;
+
     margin: 0;
     font-weight: 700;
-    font-size: 70px;
+    font-size: var(--font-size);
     line-height: 1;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--main-color);
 
     &--number {
-      font-size: 100px;
+      font-size: calc(var(--font-size) * 1.2);
       line-height: 1;
       color: var(--light-color);
 

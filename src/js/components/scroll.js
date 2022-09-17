@@ -33,9 +33,7 @@ export function scroll() {
 
     window.addEventListener('wheel', pageScroll);
 
-    window.addEventListener("hashchange", () => {
-      sectionHash();
-    });
+    window.addEventListener("hashchange", sectionHash);
 
     if(vars.htmlEl.classList.contains('page--android') || vars.htmlEl.classList.contains('page--ios')) {
       document.addEventListener('swiped', function(e) {
@@ -107,7 +105,7 @@ export function scroll() {
       });
 
       if(anchor || anchor === 0) {
-        vars.fullPage.style.transform = `translate3d(0, -${anchor * document.body.offsetHeight}px, 0)`;
+        vars.fullPage.style.transform = `translate3d(0, -${anchor * vars.bodyEl.offsetHeight}px, 0)`;
         setInert();
         anchors.forEach(item => {
           if(item.dataset.anchor == location.hash.slice(1)) {
