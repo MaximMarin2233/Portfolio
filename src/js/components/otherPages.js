@@ -3,6 +3,7 @@ import vars from '../_vars';
 export function otherPages() {
   const sectionWorks = document.querySelector('.works');
   const sectionAbout = document.querySelector('.about');
+  const aboutIllustration = document.querySelector('.about__illustration');
 
   if(!vars.fullPage) {
     vars.htmlEl.style.overflow = 'visible';
@@ -22,11 +23,11 @@ export function otherPages() {
 
       if(vars.htmlEl.offsetWidth < 575.98) {
         setTimeout(() => {
-          document.querySelector('.about__illustration').style.transform = 'translateY(-40%) translateX(50%)';
+          aboutIllustration.style.transform = 'translateY(-40%) translateX(50%)';
         }, 500);
       } else if (vars.htmlEl.offsetWidth >= 575.98) {
         setTimeout(() => {
-          document.querySelector('.about__illustration').style.transform = 'translateY(-40%)';
+          aboutIllustration.style.transform = 'translateY(-40%)';
         }, 500);
       }
     }
