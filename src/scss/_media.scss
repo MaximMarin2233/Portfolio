@@ -10,7 +10,7 @@
   .burger {
     &-menu__link {
       &:hover,
-      &:focus {
+      &.focus-visible {
         &::before,
         &::after {
           transform: translateX(0);
@@ -70,7 +70,7 @@
   .tooltip {
     &__btn {
       &:hover,
-      &:focus {
+      &.focus-visible {
         outline: 1px solid var(--main-color);
         color: var(--main-color);
 
