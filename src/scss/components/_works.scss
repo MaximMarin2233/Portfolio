@@ -6,6 +6,10 @@
   &__illustration {
     width: 650px;
     height: 266px;
+
+    &--smaller {
+      right: 5%;
+    }
   }
 
   &__img {

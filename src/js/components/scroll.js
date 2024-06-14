@@ -20,6 +20,8 @@ export function scroll() {
 
   const aboutAnim = document.querySelector('.about__illustration');
 
+  const countOfSections = 6;
+
   if(vars.fullPage) {
     setInert();
     anchors[0].inert = false;
@@ -81,11 +83,11 @@ export function scroll() {
   function scrollDown() {
     if(location.hash) {
       let stage = anchorsPos[location.hash.slice(1)] + 1;
-      if(stage < 4) {
+      if(stage < countOfSections) {
         location.hash = anchorsPosArr[stage];
         lastStage = stage;
       } else {
-        if(lastStage + 1 < 4) {
+        if(lastStage + 1 < countOfSections) {
           location.hash = anchorsPosArr[lastStage + 1];
         }
       }
@@ -112,26 +114,26 @@ export function scroll() {
             item.inert = false;
           }
         });
-        if(anchor === 3) {
+        if(anchor === 5) {
           footerMain.inert = false;
         }
 
         paginationReset();
         pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
 
-        if(anchor == 2 || anchor == 3) {
+        if(anchor > 3) {
           moonBg.classList.add('moon-bg-wrapper--hidden');
         } else {
           moonBg.classList.remove('moon-bg-wrapper--hidden');
         }
 
-        if(anchor == 3) {
+        if(anchor == 5) {
           footerMain.classList.add('footer-main--active');
         } else {
           footerMain.classList.remove('footer-main--active');
         }
 
-        if(anchorsPos[location.hash.slice(1)] == 2) {
+        if(anchorsPos[location.hash.slice(1)] == 4) {
           setTimeout(() => {
             aboutAnim.classList.add('about__illustration--animation');
           }, 2000);
