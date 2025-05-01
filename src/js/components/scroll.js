@@ -3,7 +3,7 @@ import { throttle } from '../functions/throttle';
 import 'swiped-events';
 
 export function scroll() {
-  function resizeVal () {
+  function resizeVal() {
     sectionHash();
   };
   let resizeFunc = throttle(resizeVal, 800);
@@ -22,7 +22,7 @@ export function scroll() {
 
   const countOfSections = 6;
 
-  if(vars.fullPage) {
+  if (vars.fullPage) {
     setInert();
     anchors[0].inert = false;
 
@@ -37,11 +37,11 @@ export function scroll() {
 
     window.addEventListener("hashchange", sectionHash);
 
-    if(vars.htmlEl.classList.contains('page--android') || vars.htmlEl.classList.contains('page--ios')) {
-      document.addEventListener('swiped', function(e) {
-        if(e.detail.dir == 'up') {
+    if (vars.htmlEl.classList.contains('page--android') || vars.htmlEl.classList.contains('page--ios')) {
+      document.addEventListener('swiped', function (e) {
+        if (e.detail.dir == 'up') {
           scrollDown();
-        } else if(e.detail.dir == 'down') {
+        } else if (e.detail.dir == 'down') {
           scrollUp();
         }
       });
@@ -56,23 +56,23 @@ export function scroll() {
       window.addEventListener('wheel', pageScroll);
     }, 700);
 
-    if(!e.ctrlKey) {
-      if(e.deltaY < 0) {
+    if (!e.ctrlKey) {
+      if (e.deltaY < 0) {
         scrollUp();
-      } else if(e.deltaY > 0) {
+      } else if (e.deltaY > 0) {
         scrollDown();
       }
     }
   }
 
   function scrollUp() {
-    if(location.hash) {
+    if (location.hash) {
       let stage = anchorsPos[location.hash.slice(1)] - 1;
-      if(stage >= 0) {
+      if (stage >= 0) {
         location.hash = anchorsPosArr[stage];
         lastStage = stage;
       } else {
-        if(lastStage - 1 >= 0) {
+        if (lastStage - 1 >= 0) {
           location.hash = anchorsPosArr[lastStage - 1];
         }
       }
@@ -81,13 +81,13 @@ export function scroll() {
     }
   }
   function scrollDown() {
-    if(location.hash) {
+    if (location.hash) {
       let stage = anchorsPos[location.hash.slice(1)] + 1;
-      if(stage < countOfSections) {
+      if (stage < countOfSections) {
         location.hash = anchorsPosArr[stage];
         lastStage = stage;
       } else {
-        if(lastStage + 1 < countOfSections) {
+        if (lastStage + 1 < countOfSections) {
           location.hash = anchorsPosArr[lastStage + 1];
         }
       }
@@ -98,7 +98,7 @@ export function scroll() {
   }
 
   function sectionHash() {
-    if(vars.fullPage) {
+    if (vars.fullPage) {
       let anchor = anchorsPos[location.hash.slice(1)];
 
       document.querySelector('.container--full-height').style.height = `${vars.htmlEl.clientHeight}px`;
@@ -106,34 +106,34 @@ export function scroll() {
         item.style.height = `${vars.htmlEl.clientHeight}px`;
       });
 
-      if(anchor || anchor === 0) {
+      if (anchor || anchor === 0) {
         vars.fullPage.style.transform = `translate3d(0, -${anchor * vars.bodyEl.offsetHeight}px, 0)`;
         setInert();
         anchors.forEach(item => {
-          if(item.dataset.anchor == location.hash.slice(1)) {
+          if (item.dataset.anchor == location.hash.slice(1)) {
             item.inert = false;
           }
         });
-        if(anchor === 5) {
+        if (anchor === 5) {
           footerMain.inert = false;
         }
 
         paginationReset();
         pagination[anchorsPos[location.hash.slice(1)]].classList.add('pagination__link--active');
 
-        if(anchor > 3) {
+        if (anchor > 0 && anchor < 2) {
           moonBg.classList.add('moon-bg-wrapper--hidden');
         } else {
           moonBg.classList.remove('moon-bg-wrapper--hidden');
         }
 
-        if(anchor == 5) {
+        if (anchor == 5) {
           footerMain.classList.add('footer-main--active');
         } else {
           footerMain.classList.remove('footer-main--active');
         }
 
-        if(anchorsPos[location.hash.slice(1)] == 4) {
+        if (anchorsPos[location.hash.slice(1)] == 1) {
           setTimeout(() => {
             aboutAnim.classList.add('about__illustration--animation');
           }, 2000);

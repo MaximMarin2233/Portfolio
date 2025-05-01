@@ -1,20 +1,10 @@
 .skills-list {
-  @include flex;
-
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 
   &__card {
-    --margin: 70px;
-    --elements: 3;
-
     @include flex-v-center;
-
-    margin-bottom: 70px;
-    width: calc((100% - calc(var(--margin) * (var(--elements) - 1))) / var(--elements));
-
-    &:not(:nth-child(3n)) {
-      margin-right: var(--margin);
-    }
   }
 
   &__img {

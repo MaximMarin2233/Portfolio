@@ -1,9 +1,9 @@
 export function skillBar() {
   const cards = document.querySelectorAll('[data-skill]');
 
-  if(cards.length > 0) {
+  if (cards.length > 0) {
     cards.forEach(item => {
-      let value = item.querySelector('.skills-list__value').textContent;
+      let value = 100;
       item.querySelector('[data-bar]').style.width = `${value}%`;
     });
     function onEntry(entry) {

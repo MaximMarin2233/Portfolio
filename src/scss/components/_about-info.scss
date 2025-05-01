@@ -9,6 +9,8 @@
 
   &__text {
     max-width: 600px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__descr {
@@ -17,5 +19,15 @@
 
   &__skills {
     padding: 30px 0 0;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__img,
+  picture {
+    margin-left: auto;
   }
 }

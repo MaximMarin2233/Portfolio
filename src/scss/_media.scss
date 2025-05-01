@@ -9,8 +9,10 @@
 
   .burger {
     &-menu__link {
+
       &:hover,
       &.focus-visible {
+
         &::before,
         &::after {
           transform: translateX(0);
@@ -69,12 +71,13 @@
 
   .tooltip {
     &__btn {
+
       &:hover,
       &.focus-visible {
         outline: 1px solid var(--main-color);
         color: var(--main-color);
 
-        + .tooltip__txt {
+        +.tooltip__txt {
           opacity: 1;
           visibility: visible;
         }
@@ -371,18 +374,7 @@
   }
 
   .skills-list {
-    &__card {
-      --margin: 50px;
-      --elements: 2;
-
-      &:not(:nth-child(3n)) {
-        margin-right: initial;
-      }
-
-      &:not(:nth-child(2n)) {
-        margin-right: var(--margin);
-      }
-    }
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .burger-menu__link {
@@ -662,13 +654,11 @@
   }
 
   .skills-list {
+    gap: 30px;
+
     &__img {
       margin-right: 10px;
       width: 40px;
-    }
-
-    &__card {
-      --margin: 30px;
     }
 
     &__title {
@@ -1001,14 +991,7 @@
   }
 
   .skills-list {
-    &__card {
-      margin-bottom: 50px;
-      width: 100%;
-
-      &:not(:nth-child(2n)) {
-        margin-right: 0;
-      }
-    }
+    grid-template-columns: repeat(2, 1fr);
 
     &__title {
       font-size: 15px;

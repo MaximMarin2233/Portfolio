@@ -2,22 +2,22 @@
 <html lang="ru" class="page">
 
 @include('partials/head.html', {
-  "title": "MAXIM MARIN PORTFOLIO"
+"title": "MAXIM MARIN PORTFOLIO"
 })
 
 <body class="page__body page__body--scroll-off">
   @include('partials/header.html', {
-    "home": "/",
-    "works": "works.html",
-    "about": "about.html",
-    "contacts": "#contacts",
+  "home": "/",
+  "works": "works.html",
+  "about": "about.html",
+  "contacts": "#contacts",
   })
   <main class="main">
     <div class="container container--full-height">
       <div class="full-page">
         @include('partials/home.html')
-        @include('partials/works.html')
         @include('partials/about.html')
+        @include('partials/works.html')
         @include('partials/contacts.html')
       </div>
       @include('partials/bg-elements.html')
