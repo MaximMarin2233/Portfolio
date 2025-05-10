@@ -149,6 +149,11 @@
       right: 6%;
       width: 590px;
       height: 241px;
+
+      &--smaller--2 {
+        right: -2%;
+        top: 46%;
+      }
     }
   }
 
@@ -322,6 +327,10 @@
     right: 4%;
     width: 550px;
     height: 223px;
+
+    &--smaller--2 {
+      right: -3%;
+    }
   }
 
   .contacts__illustration-content {
@@ -433,6 +442,14 @@
     right: 3%;
     width: 450px;
     height: 184px;
+
+    &--smaller--2 {
+      right: -5%;
+
+      img {
+        width: 270px;
+      }
+    }
   }
 
   .link {
@@ -594,6 +611,10 @@
   .works__illustration {
     width: 400px;
     height: 163px;
+
+    &--smaller--2 {
+      right: -9%;
+    }
   }
 
   .works-detail__content,
